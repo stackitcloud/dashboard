@@ -24,6 +24,7 @@ module.exports = {
   '/user': require('./user'),
   '/cloudprofiles': require('./cloudprofiles'),
   '/shoots': require('./shoots'),
+  '/controllerregistrations': require('./controllerregistrations'),
   '/namespaces': require('./namespaces'),
   '/namespaces/:namespace/shoots': require('./shoots'),
   '/namespaces/:namespace/infrastructure-secrets': require('./infrastructureSecrets'),

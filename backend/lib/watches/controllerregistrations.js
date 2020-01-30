@@ -14,15 +14,15 @@
 // limitations under the License.
 //
 
-module.exports = {
-  cloudprofiles: require('./cloudprofiles'),
-  projects: require('./projects'),
-  shoots: require('./shoots'),
-  infrastructureSecrets: require('./infrastructureSecrets'),
-  members: require('./members'),
-  authorization: require('./authorization'),
-  authentication: require('./authentication'),
-  journals: require('./journals'),
-  terminals: require('./terminals'),
-  controllerregistrations: require('./controllerregistrations')
+'use strict'
+
+const { cacheResource } = require('./common')
+const { getControllerRegistrations } = require('../cache')
+const {
+  dashboardClient // privileged client for the garden cluster
+} = require('../kubernetes-client')
+
+module.exports = io => {
+  const emitter = dashboardClient['core.gardener.cloud'].controllerregistrations.watchList()
+  cacheResource(emitter, getControllerRegistrations(), ['metadata.name'])
 }

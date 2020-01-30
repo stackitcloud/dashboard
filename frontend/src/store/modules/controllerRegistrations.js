@@ -14,15 +14,44 @@
 // limitations under the License.
 //
 
-module.exports = {
-  cloudprofiles: require('./cloudprofiles'),
-  projects: require('./projects'),
-  shoots: require('./shoots'),
-  infrastructureSecrets: require('./infrastructureSecrets'),
-  members: require('./members'),
-  authorization: require('./authorization'),
-  authentication: require('./authentication'),
-  journals: require('./journals'),
-  terminals: require('./terminals'),
-  controllerregistrations: require('./controllerregistrations')
+import { getControllerRegistrations } from '@/utils/api'
+
+// initial state
+const state = {
+  all: []
+}
+
+// getters
+const getters = {
+//   items: state => state.all,
+//   cloudProfileByName: (state) => (name) => {
+//     const predicate = item => item.metadata.name === name
+//     return find(state.all, predicate)
+//   }
+}
+
+// actions
+const actions = {
+  getAll: ({ commit, rootState }) => {
+    return getControllerRegistrations()
+      .then(res => {
+        commit('RECEIVE', res.data)
+        return state.all
+      })
+  }
+}
+
+// mutations
+const mutations = {
+  RECEIVE (state, items) {
+    state.all = items
+  }
+}
+
+export default {
+  namespaced: true,
+  state,
+  getters,
+  actions,
+  mutations
 }

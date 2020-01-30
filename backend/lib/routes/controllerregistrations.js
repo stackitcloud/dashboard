@@ -14,15 +14,19 @@
 // limitations under the License.
 //
 
-module.exports = {
-  cloudprofiles: require('./cloudprofiles'),
-  projects: require('./projects'),
-  shoots: require('./shoots'),
-  infrastructureSecrets: require('./infrastructureSecrets'),
-  members: require('./members'),
-  authorization: require('./authorization'),
-  authentication: require('./authentication'),
-  journals: require('./journals'),
-  terminals: require('./terminals'),
-  controllerregistrations: require('./controllerregistrations')
-}
+'use strict'
+
+const express = require('express')
+const { controllerregistrations } = require('../services')
+
+const router = module.exports = express.Router()
+
+router.route('/')
+  .get(async (req, res, next) => {
+    try {
+      const user = req.user
+      res.send(await controllerregistrations.list({ user }))
+    } catch (err) {
+      next(err)
+    }
+  })

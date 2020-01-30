@@ -260,3 +260,9 @@ function invokeTerminalMethod (method, { namespace, name, target, body }) {
     params: body
   })
 }
+
+/* Controller Registrations */
+
+export function getControllerRegistrations () {
+  return getResource(`/api/controllerregistrations`)
+}

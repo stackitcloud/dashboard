@@ -137,6 +137,23 @@ describe('watches', function () {
     })
   })
 
+  describe('controllerregistrations', function () {
+    const { controllerregistrations } = dashboardClient['core.gardener.cloud']
+
+    it('should watch controllerregistrations', async function () {
+      const watchStub = sandbox.stub(controllerregistrations, 'watchList').returns(emitter)
+      const cacheStub = sandbox.stub(cache, 'getControllerRegistrations').returns(items)
+      watches.controllerregistrations(io)
+      expect(watchStub).to.be.calledOnce
+      expect(cacheStub).to.be.calledOnce
+      expect(items).to.be.empty
+      emitter.emit('event', { type: 'ADDED', object: foobar })
+      emitter.emit('event', { type: 'ADDED', object: foobaz })
+      expect(items).to.have.length(2)
+      expect(items).to.eql([foobar, foobaz])
+    })
+  })
+
   describe('seeds', function () {
     const { seeds } = dashboardClient['core.gardener.cloud']
 

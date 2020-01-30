@@ -14,15 +14,21 @@
 // limitations under the License.
 //
 
-module.exports = {
-  cloudprofiles: require('./cloudprofiles'),
-  projects: require('./projects'),
-  shoots: require('./shoots'),
-  infrastructureSecrets: require('./infrastructureSecrets'),
-  members: require('./members'),
-  authorization: require('./authorization'),
-  authentication: require('./authentication'),
-  journals: require('./journals'),
-  terminals: require('./terminals'),
-  controllerregistrations: require('./controllerregistrations')
+'use strict'
+
+const { getControllerRegistrations } = require('../cache')
+const _ = require('lodash')
+
+function fromResource (controllerRegistrations) {
+  return _.map(controllerRegistrations, ({ metadata, spec }) => {
+    return {
+      name: metadata.name,
+      resources: spec.resources
+    }
+  })
+}
+
+exports.list = function () {
+  const controllerRegistrations = getControllerRegistrations()
+  return fromResource(controllerRegistrations)
 }

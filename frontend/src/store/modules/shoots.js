@@ -239,6 +239,8 @@ const actions = {
     return state.newShootResource
   },
   resetNewShootResource ({ commit, rootState, rootGetters }) {
+    const extensions = rootGetters.controllerRegistrationList
+    console.log(extensions)
     const shootResource = {
       apiVersion: 'core.gardener.cloud/v1alpha1',
       kind: 'Shoot',

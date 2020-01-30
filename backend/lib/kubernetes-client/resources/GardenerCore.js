@@ -81,11 +81,22 @@ class Shoot extends mix(GardenerCore).with(NamespaceScoped, Readable, Observable
   }
 }
 
+class ControllerRegistration extends mix(GardenerCore).with(ClusterScoped, Readable, Observable) {
+  static get names () {
+    return {
+      plural: 'controllerregistrations',
+      singular: 'controllerregistration',
+      kind: 'ControllerRegistration'
+    }
+  }
+}
+
 module.exports = {
   CloudProfile,
   Project,
   Quota,
   SecretBinding,
   Seed,
-  Shoot
+  Shoot,
+  ControllerRegistration
 }

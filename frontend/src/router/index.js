@@ -535,6 +535,14 @@ export default function createRouter ({ store, userManager }) {
     return store.dispatch('fetchCloudProfiles')
   }
 
+  function ensureControllerRegistrationsLoaded () {
+    const controllerRegistrationList = store.getters.controllerRegistrationList
+    if (controllerRegistrationList && controllerRegistrationList.length) {
+      return Promise.resolve()
+    }
+    return store.dispatch('fetchControllerRegistrations')
+  }
+
   function ensureDataLoaded (to, from, next) {
     const meta = to.meta || {}
     if (meta.public) {
@@ -546,6 +554,7 @@ export default function createRouter ({ store, userManager }) {
     Promise
       .all([
         ensureCloudProfilesLoaded(),
+        ensureControllerRegistrationsLoaded(),
         ensureProjectsLoaded(),
         store.dispatch('unsubscribeComments')
       ])

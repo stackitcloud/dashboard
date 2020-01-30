@@ -44,6 +44,7 @@ import moment from 'moment-timezone'
 
 import shoots from './modules/shoots'
 import cloudProfiles from './modules/cloudProfiles'
+import controllerRegistrations from './modules/controllerRegistrations'
 import projects from './modules/projects'
 import members from './modules/members'
 import infrastructureSecrets from './modules/infrastructureSecrets'
@@ -146,6 +147,9 @@ const getters = {
       const filteredCloudProfiles = filter(state.cloudProfiles.all, predicate)
       return sortBy(filteredCloudProfiles, 'metadata.name')
     }
+  },
+  controllerRegistrationList (state) {
+    return state.controllerRegistrations.all
   },
   machineTypesOrVolumeTypesByCloudProfileNameAndRegionAndZones (state, getters) {
     const machineAndVolumeTypePredicate = unavailableItems => {
@@ -499,6 +503,12 @@ const actions = {
         dispatch('setError', err)
       })
   },
+  fetchControllerRegistrations ({ dispatch }) {
+    return dispatch('controllerRegistrations/getAll')
+      .catch(err => {
+        dispatch('setError', err)
+      })
+  },
   fetchProjects ({ dispatch }) {
     return dispatch('projects/getAll')
       .catch(err => {
@@ -813,6 +823,7 @@ const modules = {
   projects,
   members,
   cloudProfiles,
+  controllerRegistrations,
   shoots,
   infrastructureSecrets,
   journals
