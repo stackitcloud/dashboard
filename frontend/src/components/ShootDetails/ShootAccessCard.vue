@@ -95,29 +95,29 @@ limitations under the License.
 
     <v-list-item v-if="isKubeconfigTileVisible">
       <v-list-item-icon>
-        <v-icon color="primary">insert_drive_file</v-icon>
+        <v-icon class="primary--text">insert_drive_file</v-icon>
       </v-list-item-icon>
       <v-list-item-content>
-        <v-list-item-title>Kubeconfig</v-list-item-title>
+        <v-list-item-title class="primary--text">Kubeconfig</v-list-item-title>
       </v-list-item-content>
       <v-list-item-action class="mx-0">
         <v-tooltip top>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" icon @click.native.stop="onDownload">
-              <v-icon>mdi-download</v-icon>
+              <v-icon class="primary--text">mdi-download</v-icon>
             </v-btn>
           </template>
           <span>Download Kubeconfig</span>
         </v-tooltip>
       </v-list-item-action>
       <v-list-item-action class="mx-0">
-        <copy-btn :clipboard-text="kubeconfig"></copy-btn>
+        <copy-btn :clipboard-text="kubeconfig" class="primary--text"></copy-btn>
       </v-list-item-action>
       <v-list-item-action class="mx-0">
         <v-tooltip top>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" icon @click.native.stop="expansionPanelKubeconfig = !expansionPanelKubeconfig">
-              <v-icon>{{visibilityIconKubeconfig}}</v-icon>
+              <v-icon class="primary--text">{{visibilityIconKubeconfig}}</v-icon>
             </v-btn>
           </template>
           <span>{{kubeconfigVisibilityTitle}}</span>

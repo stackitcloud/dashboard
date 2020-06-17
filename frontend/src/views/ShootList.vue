@@ -151,10 +151,10 @@ limitations under the License.
 
       <v-dialog v-model="clusterAccessDialog" max-width="600">
         <v-card>
-          <v-card-title class="teal darken-1 grey--text text--lighten-4">
-            <div class="headline">Cluster Access <code class="cluster_name">{{currentName}}</code></div>
+          <v-card-title class="primary white--text">
+            <div class="headline">Cluster Access <code class="primary--text">{{currentName}}</code></div>
             <v-spacer></v-spacer>
-            <v-btn icon class="grey--text text--lighten-4" @click.native="hideDialog">
+            <v-btn icon class="primary--text text--lighten-4" @click.native="hideDialog">
               <v-icon>close</v-icon>
             </v-btn>
           </v-card-title>
@@ -447,10 +447,6 @@ export default {
   .dashboard {
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  .cluster_name {
-    color: rgb(0, 137, 123);
   }
 
   .shootListTable table.table {

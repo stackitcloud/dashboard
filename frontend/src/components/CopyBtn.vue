@@ -30,7 +30,7 @@ limitations under the License.
     <v-tooltip top>
       <template v-slot:activator="{ on }">
         <v-btn v-on="on" icon ref="copy" :color="btnColor">
-          <v-icon :small="true">{{icon}}</v-icon>
+          <v-icon :small="true" class="primary--text">{{icon}}</v-icon>
         </v-btn>
       </template>
       <span>{{tooltipText}}</span>

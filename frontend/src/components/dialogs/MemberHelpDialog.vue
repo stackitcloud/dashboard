@@ -110,12 +110,12 @@ export default {
   }
   .help_user {
     .dialog-title {
-      background-image: url('../../assets/add_user_background.svg');
+      background-image: url('../../assets/default_background.svg');
     }
   }
   .help_service {
     .dialog-title {
-      background-image: url('../../assets/add_service_background.svg');
+      background-image: url('../../assets/default_background.svg');
     }
   }
 </style>
