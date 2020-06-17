@@ -57,7 +57,7 @@ limitations under the License.
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <template v-if="canGetSecrets">
+      <template v-if="canGetSecrets && isAdmin">
         <v-divider inset></v-divider>
         <cluster-metrics v-if="!metricsNotAvailableText" :shootItem="shootItem"></cluster-metrics>
         <v-list-item v-else>
@@ -103,7 +103,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'canGetSecrets'
+      'canGetSecrets',
+      'isAdmin'
     ]),
     metricsNotAvailableText () {
       if (this.isTestingCluster) {

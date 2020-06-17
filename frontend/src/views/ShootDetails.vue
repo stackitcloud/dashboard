@@ -18,7 +18,6 @@ limitations under the License.
     <v-row class="d-flex">
       <v-col cols="12" md="6">
         <shoot-details-card :shootItem="shootItem"></shoot-details-card>
-        <shoot-infrastructure-card :shootItem="shootItem" class="mt-4"></shoot-infrastructure-card>
         <shoot-external-tools-card :shootItem="shootItem" class="mt-4"></shoot-external-tools-card>
         <shoot-lifecycle-card ref="shootLifecycle" :shootItem="shootItem" class="mt-4"></shoot-lifecycle-card>
       </v-col>
@@ -30,12 +29,13 @@ limitations under the License.
           <shoot-access-card :shootItem="shootItem"></shoot-access-card>
         </v-card>
         <shoot-monitoring-card :shootItem="shootItem"></shoot-monitoring-card>
-        <v-card v-if="isLoggingFeatureGateEnabled" class="mt-4">
+        <v-card v-if="isLoggingFeatureGateEnabled && isAdmin"  class="mt-4">
           <v-toolbar flat dark dense color="cyan darken-2">
             <v-toolbar-title class="subtitle-1">Logging</v-toolbar-title>
           </v-toolbar>
           <shoot-logging :shootItem="shootItem"></shoot-logging>
         </v-card>
+        <shoot-infrastructure-card :shootItem="shootItem" class="mt-4"></shoot-infrastructure-card>
         <v-card v-if="isKymaFeatureEnabled && isKymaAddonEnabled" class="mt-4">
           <v-toolbar flat dark dense color="cyan darken-2">
             <v-toolbar-title class="subtitle-1">{{kymaTitle}}</v-toolbar-title>
