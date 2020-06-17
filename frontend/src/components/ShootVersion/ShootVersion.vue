@@ -30,7 +30,7 @@ limitations under the License.
             :dark="k8sPatchAvailable"
             :ripple="canUpdate"
             depressed
-            color="cyan darken-2"
+            color="primary"
           >
             <v-icon small v-if="availableK8sUpdates">arrow_drop_up</v-icon>
             {{shootK8sVersion}}

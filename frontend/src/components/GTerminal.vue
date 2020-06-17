@@ -27,22 +27,22 @@ limitations under the License.
       <g-popper
         v-if="snackbarDetailsText"
         title="Details"
-        toolbarColor="cyan darken-2"
+        toolbarColor="primary"
         :popperKey="`popper_snackbar_${uuid}`"
         placement="bottom"
         :boundariesSelector="`#boundary_${uuid}`"
       >
         {{snackbarDetailsText}}
         <template v-slot:popperRef>
-          <v-btn text small color="cyan darken-2">
+          <v-btn text small color="primary">
             Details
           </v-btn>
         </template>
       </g-popper>
-      <v-btn text color="cyan darken-2" @click="retry()">
+      <v-btn text color="primary" @click="retry()">
         Retry
       </v-btn>
-      <v-btn text color="cyan darken-2" @click="hideSnackbar()">
+      <v-btn text color="primary" @click="hideSnackbar()">
         Close
       </v-btn>
     </v-snackbar>
@@ -73,7 +73,7 @@ limitations under the License.
               <!-- g-popper boundariesSelector: The id must not start with a digit. QuerySelector method uses CSS3 selectors for querying the DOM and CSS3 doesn't support ID selectors that start with a digit -->
               <g-popper
                 :title="`${imageShortText} Help`"
-                toolbarColor="cyan darken-2"
+                toolbarColor="primary"
                 :popperKey="`popper_${uuid}`"
                 placement="bottom"
                 :boundariesSelector="`#boundary_${uuid}`"

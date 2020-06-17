@@ -20,7 +20,7 @@ limitations under the License.
     <v-list class="pt-0" two-line>
       <v-list-item v-if="selectable || osUpdates">
         <v-list-item-action>
-          <v-checkbox v-if="selectable" color="cyan darken-2" v-model="osUpdates"></v-checkbox>
+          <v-checkbox v-if="selectable" color="primary" v-model="osUpdates"></v-checkbox>
           <v-icon v-else>mdi-arrow-up-bold-circle-outline</v-icon>
         </v-list-item-action>
         <v-list-item-content>
@@ -33,7 +33,7 @@ limitations under the License.
       </v-list-item>
       <v-list-item v-if="selectable || k8sUpdates">
         <v-list-item-action>
-          <v-checkbox v-if="selectable" color="cyan darken-2" v-model="k8sUpdates"></v-checkbox>
+          <v-checkbox v-if="selectable" color="primary" v-model="k8sUpdates"></v-checkbox>
           <v-icon v-else>mdi-arrow-up-bold-circle-outline</v-icon>
         </v-list-item-action>
         <v-list-item-content>
@@ -46,7 +46,7 @@ limitations under the License.
       </v-list-item>
       <v-list-item v-if="showNoUpdates">
         <v-list-item-action>
-          <v-checkbox v-if="selectable" color="cyan darken-2" v-model="k8sUpdates"></v-checkbox>
+          <v-checkbox v-if="selectable" color="primary" v-model="k8sUpdates"></v-checkbox>
           <v-icon v-else>mdi-close-circle-outline</v-icon>
         </v-list-item-action>
         <v-list-item-content>

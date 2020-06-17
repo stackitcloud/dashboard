@@ -20,7 +20,6 @@ limitations under the License.
       fixed
       app
       :mobile-break-point="400"
-      dark
     >
       <div class="teaser">
         <div class="content center">
@@ -28,15 +27,13 @@ limitations under the License.
             <v-icon>mdi-chevron-double-left</v-icon>
           </v-btn>
           <a href="/">
-            <img src="../assets/logo.svg" class="logo">
-            <h1 class="white--text">Gardener <span class="version">{{version}}</span></h1>
-            <h2>Universal Kubernetes at Scale</h2>
+            <img src="../assets/logo-beta.svg" class="logo">
+            <h2 class="white--text">Kubernetes Engine</h2>
           </a>
         </div>
       </div>
       <template v-if="projectList.length">
         <v-menu
-          light
           attach
           offset-y
           left
@@ -51,7 +48,7 @@ limitations under the License.
             <v-btn
               v-on="on"
               block
-              class="project-selector elevation-4 white--text"
+              class="project-selector elevation-4 primary--text"
               @keydown.down="highlightProjectWithKeys('down')"
               @keydown.up="highlightProjectWithKeys('up')"
               @keyup.enter="navigateToHighlightedProject"
@@ -65,7 +62,7 @@ limitations under the License.
 
           <v-card>
             <template v-if="projectList.length > 3">
-              <v-card-title class="pa-0 grey lighten-5">
+              <v-card-title class="pa-0">
                 <v-text-field
                   clearable
                   label="Filter projects"
@@ -74,7 +71,6 @@ limitations under the License.
                   single-line
                   hide-details
                   full-width
-                  color="grey darken-1"
                   prepend-icon="search"
                   class="pl-4 mt-0 pt-0 project-filter"
                   v-model="projectFilter"
@@ -95,27 +91,26 @@ limitations under the License.
                 class="project-list-tile"
                 v-for="project in visibleProjectList"
                 @click="onProjectClick($event, project)"
-                :class="{'grey lighten-4' : isHighlightedProject(project)}"
                 :key="project.metadata.name"
                 :data-g-project-name="project.metadata.name"
               >
                 <v-list-item-avatar>
-                  <v-icon v-if="project.metadata.name === projectName" color="teal">check</v-icon>
+                  <v-icon v-if="project.metadata.name === projectName" class="primary--text">check</v-icon>
                 </v-list-item-avatar>
-                <v-list-item-content>
+                <v-list-item-content class="primary--text">
                   <v-list-item-title class="project-name">{{project.metadata.name}}</v-list-item-title>
                   <v-list-item-subtitle class="project-owner">{{getProjectOwner(project)}}</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
             </v-list>
-            <v-card-actions class="grey lighten-3">
+            <v-card-actions class="accent">
               <v-tooltip top :disabled="canCreateProject" style="width: 100%">
                 <template v-slot:activator="{ on }">
                   <div v-on="on">
                     <v-btn
                       text
                       block
-                      class="project-add text-left teal--text"
+                      class="project-add text-left primary--text"
                       :disabled="!canCreateProject"
                       @click.stop="openProjectDialog"
                     >
@@ -133,7 +128,7 @@ limitations under the License.
       <v-list ref="mainMenu">
         <v-list-item :to="{name: 'Home'}" exact v-if="hasNoProjects">
           <v-list-item-action>
-            <v-icon class="white--text">mdi-home-outline</v-icon>
+            <v-icon class="primary--text">mdi-home-outline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="subtitle-1">Home</v-list-item-title>
@@ -143,10 +138,10 @@ limitations under the License.
           <template v-for="(route, index) in routes">
             <v-list-item v-if="!route.meta.menu.hidden" :to="namespacedRoute(route)" :key="index">
               <v-list-item-action>
-                <v-icon small class="white--text">{{route.meta.menu.icon}}</v-icon>
+                <v-icon small class="primary--text">{{route.meta.menu.icon}}</v-icon>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title class="subtitle-1" >{{route.meta.menu.title}}</v-list-item-title>
+                <v-list-item-title class="subtitle-1 primary--text" >{{route.meta.menu.title}}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </template>
@@ -154,9 +149,6 @@ limitations under the License.
       </v-list>
 
       <v-footer fixed>
-        <img :src="footerLogoUrl" height="20px">
-        <v-spacer></v-spacer>
-        <div class="white--text">{{ copyright }}</div>
       </v-footer>
 
       <project-create-dialog v-model="projectDialog"></project-create-dialog>
@@ -464,17 +456,17 @@ export default {
         position: relative;
         height: $teaserHeight;
         overflow: hidden;
-        background-color: #212121;
+        background-color: #004E5A;
         text-align: center;
 
         a {
           text-decoration: none;
 
           .logo {
-            height: 80px;
+            height: 35px;
             pointer-events: none;
             margin: 21px 0 0 0;
-            transform: translateX(30%);
+            /*transform: translateX(30%);*/
           }
 
           h1 {
@@ -491,13 +483,12 @@ export default {
               line-height: 10px;
               letter-spacing: 3px;
               position: absolute;
-              top: 6px;
+              top: 2px;
               right: 20px;
             }
           }
 
           h2 {
-            color: rgb(0, 137, 123);
             font-size: 15px;
             font-weight: 300;
             padding: 0px;
@@ -513,7 +504,7 @@ export default {
       height: 60px !important;
       font-weight: 700;
       font-size: 16px;
-      background-color: rgba(0,0,0,0.1) !important;
+      /*background-color: #004E5A !important;*/
     }
 
     .v-footer{
@@ -523,15 +514,16 @@ export default {
     }
 
     .v-list {
+      /*background: #004E5A;*/
+
       .v-list-item__title {
         text-transform: uppercase !important;
         max-width: 180px;
       }
       .v-list-item--active {
-        background: rgba(255,255,255,0.1) !important;
-        color: white !important;
+        background: #E5EDEF !important;
         .icon {
-          color: white !important;
+          color: #004E5A !important;
         }
       }
     }

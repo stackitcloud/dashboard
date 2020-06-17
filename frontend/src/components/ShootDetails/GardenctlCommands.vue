@@ -19,7 +19,7 @@ limitations under the License.
     <template v-for="({ title, subtitle, value }, index) in commands">
       <v-list-item :key="title">
         <v-list-item-icon>
-          <v-icon v-if="index === 0" color="cyan darken-2">mdi-console-line</v-icon>
+          <v-icon v-if="index === 0" color="primary">mdi-console-line</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>{{title}}</v-list-item-title>

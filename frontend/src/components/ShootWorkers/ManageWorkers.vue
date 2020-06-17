@@ -49,14 +49,14 @@ limitations under the License.
           fab
           icon
           class="ml-1"
-          color="cyan darken-2">
-          <v-icon class="cyan--text text--darken-2">add</v-icon>
+          color="primary">
+          <v-icon class="primary--text">add</v-icon>
         </v-btn>
         <v-btn
           :disabled="!(allMachineTypes.length > 0)"
           @click="addWorker"
           text
-          class="cyan--text text--darken-2">
+          class="primary--text">
           Add Worker Group
         </v-btn>
       </v-col>

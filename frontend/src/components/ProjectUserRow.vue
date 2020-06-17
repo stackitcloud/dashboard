@@ -25,14 +25,14 @@ limitations under the License.
           {{displayName}}
           <span v-if="isCurrentUser">(me)</span>
         </v-list-item-title>
-        <v-list-item-subtitle>
-          <a v-if="isEmail" :href="`mailto:${username}`" class="cyan--text text--darken-2">{{username}}</a>
+        <v-list-item-subtitle class="text--primary">
+          <a v-if="isEmail" :href="`mailto:${username}`" class="primary--text">{{username}}</a>
           <span v-else>{{username}}</span>
         </v-list-item-subtitle>
       </v-list-item-content>
       <v-list-item-action class="ml-1">
         <div d-flex flex-row>
-          <v-chip class="mr-3" v-for="roleName in roleDisplayNames" :key="roleName" small color="grey darken-4" outlined>
+          <v-chip class="mr-3 primary--text" v-for="roleName in roleDisplayNames" :key="roleName" small outlined>
             {{roleName}}
           </v-chip>
         </div>

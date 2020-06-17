@@ -24,7 +24,7 @@ limitations under the License.
         <v-list-item-title class="cursor-pointer">
           <g-popper
             :title="displayName"
-            toolbarColor="cyan darken-2"
+            toolbarColor="primary"
             :popperKey="`serviceAccount_sa_${username}`"
           >
             <template v-slot:popperRef>

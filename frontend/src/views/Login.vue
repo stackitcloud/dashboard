@@ -21,35 +21,28 @@ limitations under the License.
         <v-row>
           <v-col cols="5" class="d-flex flex-column">
             <div class="flex-grow-1">
-              <img src="../assets/logo.svg" class="logo">
-              <h1>Gardener</h1>
-              <h2>Universal Kubernetes at Scale</h2>
-            </div>
-            <div class="flex-grow-0 px-2">
-              <img :src="footerLogoUrl" height="24">
+              <img src="../assets/logo-beta.svg" class="logo">
+              <h1>Kubernetes Engine</h1>
             </div>
           </v-col>
           <v-col cols="7" class="d-flex flex-column">
-              <div class="flex-shrink-1">
+              <div class="flex-shrink-1 primary--text">
                 <h1>Enterprise-Grade Kubernetes Service</h1>
-                <h2>Infrastructure agnostic and working across all major public clouds</h2>
+                <h2>Serving for your purpose!</h2>
               </div>
               <div v-if="landingPageUrl" class="flex-shrink-1 hint">
                 <span>Discover what our service is about at the</span>
                 <a :href="landingPageUrl" target="_blank">Gardener Landing Page <v-icon size="20">mdi-open-in-new</v-icon></a>
               </div>
               <div class="flex-grow-1 actions">
-                <div class="loginButton orange lighten-2 elevation-2" @click.stop="handleLogin(primaryLoginType)">
-                  Login <v-icon dark class="ml-1">mdi-login-variant</v-icon>
+                <div class="loginButton secondary elevation-1 primary--text" @click.stop="handleLogin(primaryLoginType)">
+                  Login <v-icon class="ml-1 primary--text">mdi-login-variant</v-icon>
                 </div>
                 <template v-if="showTokenLoginLink">
                   <div class="loginLink">
                     <a @click.stop="handleLogin('token')">Login with Bearer Token</a>
                   </div>
                 </template>
-              </div>
-              <div class=" flex-shrink-1 text-right pr-2">
-                &copy; {{ new Date().getFullYear() }}
               </div>
           </v-col>
         </v-row>
@@ -58,14 +51,13 @@ limitations under the License.
     <vue-snotify></vue-snotify>
     <v-dialog v-model="dialog" persistent max-width="480px">
       <v-card>
-        <v-card-title class="orange lighten-1">
+        <v-card-title class="primary">
           <span class="headline white--text">Login</span>
         </v-card-title>
-        <v-card-text>
+        <v-card-text class="primary--text">
           <v-text-field
             ref="token"
             v-model="token"
-            color="grey"
             :append-icon="showToken ? 'visibility' : 'visibility_off'"
             :type="showToken ? 'text' : 'password'"
             outline
@@ -79,7 +71,7 @@ limitations under the License.
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn text @click="closeDialog">Cancel</v-btn>
-          <v-btn text color="teal darken-2" @click="submitToken">Ok</v-btn>
+          <v-btn text color="primary" @click="submitToken">Ok</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -206,19 +198,19 @@ $hexOutline: darken($hexArea,1);
       .row {
         margin: 0;
         .col:nth-child(1) {
-          background-color: #2c353d;
+          background-color: #004E5A;
           padding: 0;
 
           .logo {
-            height: 20vw;
+            height: 6vw;
             pointer-events: none;
             display: block;
             margin: auto;
-            margin-top: 100px;
+            margin-top: 150px;
           }
 
           h1 {
-            font-size: 4vw;
+            font-size: 3vw;
             font-weight: 200;
             width: 100%;
             text-align: center;
@@ -238,13 +230,6 @@ $hexOutline: darken($hexArea,1);
         .col:nth-child(2) {
           background-color: white;
           padding: 100px 0px 0px 50px;
-          background:
-            radial-gradient(circle farthest-side at 0% 50%, $hexArea 23.5%, rgba(240, 166, 17, 0) 0) 21px 30px,
-            radial-gradient(circle farthest-side at 0% 50%, $hexOutline 24%, rgba(240, 166, 17, 0) 0) 19px 30px,
-            linear-gradient($hexArea 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, $hexArea 0) 0 0,
-            linear-gradient(150deg, $hexArea 24%, $hexOutline 0, $hexOutline 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, $hexOutline 0, $hexOutline 76%, $hexArea 0) 0 0,
-            linear-gradient(30deg, $hexArea 24%, $hexOutline 0, $hexOutline 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, $hexOutline 0, $hexOutline 76%, $hexArea 0) 0 0,
-            linear-gradient(90deg, $hexOutline 2%, $hexArea 0, $hexArea 98%, $hexOutline 0%) 0 0 $hexOutline;
           background-size: 40px 60px;
 
           h1 {
@@ -252,7 +237,6 @@ $hexOutline: darken($hexArea,1);
             width: 100%;
             text-align: left;
             font-family: 'Roboto', sans-serif;
-            color: $bg2;
             white-space: nowrap;
             font-weight: 400;
           }
@@ -288,7 +272,6 @@ $hexOutline: darken($hexArea,1);
             .loginButton {
               padding: 10px;
               padding-left: 40px;
-              color: white;
               font-size: 20px;
               cursor: pointer;
               bottom: 80px;
@@ -310,7 +293,7 @@ $hexOutline: darken($hexArea,1);
               a {
                 color: #cfcfcf;
                 &:hover {
-                  color: #ffb74d;
+                  color: #004E5A;
                 }
               }
             }

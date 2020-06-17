@@ -18,7 +18,7 @@ limitations under the License.
   <div class="newshoot-container">
     <v-container fluid class="newshoot-cards">
       <v-card flat>
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
           Infrastructure
         </v-card-title>
         <v-card-text>
@@ -30,7 +30,7 @@ limitations under the License.
         </v-card-text>
       </v-card>
       <v-card flat class="mt-4">
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
           Cluster Details
         </v-card-title>
         <v-card-text>
@@ -42,7 +42,7 @@ limitations under the License.
         </v-card-text>
       </v-card>
       <v-card flat class="mt-4">
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
           Infrastructure Details
         </v-card-title>
         <v-card-text>
@@ -54,7 +54,7 @@ limitations under the License.
         </v-card-text>
       </v-card>
       <v-card flat class="mt-4" v-if="cfg.accessRestriction">
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
          Access Restrictions
         </v-card-title>
         <v-card-text>
@@ -65,7 +65,7 @@ limitations under the License.
         </v-card-text>
       </v-card>
       <v-card flat class="mt-4">
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
           Worker
         </v-card-title>
         <v-card-text>
@@ -77,7 +77,7 @@ limitations under the License.
        </v-card-text>
       </v-card>
       <v-card flat class="mt-4">
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
           Add-Ons (not actively monitored and provided on a best-effort basis only)
         </v-card-title>
         <v-card-text>
@@ -88,7 +88,7 @@ limitations under the License.
        </v-card-text>
       </v-card>
       <v-card flat class="mt-4">
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
           Maintenance
         </v-card-title>
         <v-card-text>
@@ -103,7 +103,7 @@ limitations under the License.
        </v-card-text>
       </v-card>
       <v-card flat class="mt-4">
-        <v-card-title class="subtitle-1 white--text cyan darken-2 cardTitle">
+        <v-card-title class="subtitle-1 white--text primary cardTitle">
           Hibernation
         </v-card-title>
         <v-card-text>
@@ -119,7 +119,7 @@ limitations under the License.
     <v-divider></v-divider>
     <div class="d-flex align-center justify-end toolbar">
       <v-divider vertical></v-divider>
-      <v-btn text @click.native.stop="createClicked()" :disabled="!valid" color="cyan darken-2">Create</v-btn>
+      <v-btn text @click.native.stop="createClicked()" :disabled="!valid" color="primary">Create</v-btn>
     </div>
     <confirm-dialog ref="confirmDialog"></confirm-dialog>
   </div>

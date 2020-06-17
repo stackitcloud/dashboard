@@ -21,20 +21,20 @@ limitations under the License.
         <journal :journal="journal"></journal>
       </v-card>
       <div class="d-flex align-center justify-center mt-4">
-        <v-btn text color="cyan darken-2" :href="createJournalLink" target="_blank" title="Create Journal">
+        <v-btn text color="primary" :href="createJournalLink" target="_blank" title="Create Journal">
           <span class="pr-2">Create Journal</span>
-          <v-icon color="cyan darken-2" class="link-icon">mdi-open-in-new</v-icon>
+          <v-icon color="primary" class="link-icon">mdi-open-in-new</v-icon>
         </v-btn>
       </div>
     </template>
     <v-card v-else>
-      <v-toolbar flat dark dense color="cyan darken-2">
+      <v-toolbar flat dark dense color="primary">
         <v-toolbar-title class="subtitle-1">Journal</v-toolbar-title>
       </v-toolbar>
       <v-card-actions class="d-flex justify-center">
-        <v-btn text color="cyan darken-2" :href="createJournalLink" target="_blank" title="Create Journal">
+        <v-btn text color="primary" :href="createJournalLink" target="_blank" title="Create Journal">
           <span class="pr-2">Create Journal</span>
-          <v-icon color="cyan darken-2" class="link-icon">mdi-open-in-new</v-icon>
+          <v-icon color="primary" class="link-icon">mdi-open-in-new</v-icon>
         </v-btn>
       </v-card-actions>
     </v-card>

@@ -17,7 +17,7 @@ limitations under the License.
 <template>
   <g-popper
     :title="workerGroup.name"
-    toolbarColor="cyan darken-2"
+    toolbarColor="primary"
     :popperKey="`worker_group_${workerGroup.name}`"
   >
     <template v-slot:popperRef>
@@ -25,7 +25,7 @@ limitations under the License.
         small
         class="cursor-pointer my-0 ml-0"
         outlined
-        color="cyan darken-2">
+        color="primary">
         {{workerGroup.name}}
       </v-chip>
     </template>

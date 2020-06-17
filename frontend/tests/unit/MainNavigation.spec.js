@@ -187,7 +187,7 @@ describe('MainNavigation.vue', function () {
     await Vue.nextTick()
     const projectListWrapper = wrapper.find({ ref: 'projectList' })
     const exactMatchEl = projectListWrapper.vm.$children[1].$el
-    expect(exactMatchEl.className).to.contain('grey lighten-4')
+    expect(exactMatchEl.className).to.contain('theme--light')
   })
 
   it('Projects can be highlighted via arrow keys', async function () {

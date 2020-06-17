@@ -31,7 +31,7 @@ limitations under the License.
     </template>
     <v-list-item v-else>
       <v-list-item-icon>
-        <v-icon color="cyan darken-2">mdi-alert-circle-outline</v-icon>
+        <v-icon color="primary">mdi-alert-circle-outline</v-icon>
       </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-title>

@@ -36,12 +36,12 @@ limitations under the License.
           v-if="hasControlPlaneTerminalAccess"
           label="Control Plane"
           value="cp"
-          color="cyan darken-2"
+          color="primary"
         ></v-radio>
         <v-radio
           v-if="hasShootTerminalAccess"
           value="shoot"
-          color="cyan darken-2"
+          color="primary"
           :disabled="isShootStatusHibernated"
         >
           <template v-slot:label>
@@ -53,7 +53,7 @@ limitations under the License.
           v-if="hasGardenTerminalAccess"
           label="Garden Cluster"
           value="garden"
-          color="cyan darken-2"
+          color="primary"
         ></v-radio>
       </v-radio-group>
     </template>

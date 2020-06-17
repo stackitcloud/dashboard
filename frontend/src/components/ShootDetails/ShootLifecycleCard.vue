@@ -16,13 +16,13 @@ limitations under the License.
 
 <template>
   <v-card>
-    <v-toolbar flat dark dense color="cyan darken-2">
+    <v-toolbar flat dark dense color="primary">
       <v-toolbar-title class="subtitle-1">Lifecycle</v-toolbar-title>
     </v-toolbar>
     <v-list>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">mdi-sleep</v-icon>
+          <v-icon color="primary">mdi-sleep</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>Hibernation</v-list-item-title>
@@ -31,7 +31,7 @@ limitations under the License.
               v-if="isShootHasNoHibernationScheduleWarning && !isShootStatusHibernationProgressing"
               small
               class="pr-1"
-              color="cyan darken-2"
+              color="primary"
             >mdi-calendar-alert</v-icon>
             <v-progress-circular v-if="isShootStatusHibernationProgressing"
               indeterminate
@@ -53,7 +53,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">mdi-wrench-outline</v-icon>
+          <v-icon color="primary">mdi-wrench-outline</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>Maintenance</v-list-item-title>
@@ -71,7 +71,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">mdi-tractor</v-icon>
+          <v-icon color="primary">mdi-tractor</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>Reconcile</v-list-item-title>
@@ -89,9 +89,9 @@ limitations under the License.
           <v-list-item-icon>
             <v-badge color="white" overlap bottom>
               <template v-slot:badge>
-                <v-icon color="cyan darken-2">mdi-refresh</v-icon>
+                <v-icon color="primary">mdi-refresh</v-icon>
               </template>
-              <v-icon color="cyan darken-2">mdi-file</v-icon>
+              <v-icon color="primary">mdi-file</v-icon>
             </v-badge>
           </v-list-item-icon>
           <v-list-item-content>
@@ -106,7 +106,7 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">mdi-delete-circle-outline</v-icon>
+            <v-icon color="primary">mdi-delete-circle-outline</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>

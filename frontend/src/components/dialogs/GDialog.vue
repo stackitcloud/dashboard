@@ -182,7 +182,7 @@ export default {
         case 'orange':
           return 'orange darken-2 grey--text text--lighten-4'
         default:
-          return 'cyan darken-2 grey--text text--lighten-4'
+          return 'primary grey--text text--lighten-4'
       }
     },
     textColorClassForString (textColorClass) {
@@ -192,7 +192,7 @@ export default {
         case 'orange':
           return 'orange--text text--darken-2'
         default:
-          return 'cyan--text text--darken-2'
+          return 'primary--text'
       }
     },
     resolveAction (value) {

@@ -16,13 +16,13 @@ limitations under the License.
 
 <template>
   <v-card>
-    <v-toolbar flat dark dense color="cyan darken-2">
+    <v-toolbar flat dark dense color="primary">
       <v-toolbar-title class="subtitle-1">Details</v-toolbar-title>
     </v-toolbar>
     <v-list>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">info_outline</v-icon>
+          <v-icon color="primary">info_outline</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>Name</v-list-item-subtitle>
@@ -38,14 +38,14 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">mdi-clock-outline</v-icon>
+            <v-icon color="primary">mdi-clock-outline</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>Cluster Termination</v-list-item-subtitle>
             <v-list-item-title class="d-flex align-center pt-1">
               <v-icon
                 v-if="!isSelfTerminationWarning"
-                color="cyan darken-2"
+                color="primary"
                 left
                 size="18"
               >mdi-information</v-icon>
@@ -63,7 +63,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">mdi-cube-outline</v-icon>
+          <v-icon color="primary">mdi-cube-outline</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>Kubernetes Version</v-list-item-subtitle>
@@ -78,7 +78,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">mdi-server</v-icon>
+          <v-icon color="primary">mdi-server</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>Worker Groups</v-list-item-subtitle>
@@ -99,7 +99,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">perm_identity</v-icon>
+          <v-icon color="primary">perm_identity</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>Created by</v-list-item-subtitle>
@@ -126,7 +126,7 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">label_outline</v-icon>
+            <v-icon color="primary">label_outline</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>Purpose</v-list-item-subtitle>
@@ -144,7 +144,7 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">mdi-file-document-outline</v-icon>
+            <v-icon color="primary">mdi-file-document-outline</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>{{slaTitle}}</v-list-item-subtitle>
@@ -156,7 +156,7 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">mdi-earth</v-icon>
+            <v-icon color="primary">mdi-earth</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>Access Restrictions</v-list-item-subtitle>
@@ -176,7 +176,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">mdi-puzzle</v-icon>
+          <v-icon color="primary">mdi-puzzle</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>Add-ons <span class="caption">(not actively monitored and provided on a best-effort basis only)</span></v-list-item-subtitle>
@@ -186,7 +186,7 @@ limitations under the License.
                 :key="index"
                 small
                 outlined
-                color="cyan darken-2"
+                color="primary"
                 class="mr-2"
               >
               {{name}}

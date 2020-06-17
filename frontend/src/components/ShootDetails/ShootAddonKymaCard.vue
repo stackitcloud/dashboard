@@ -18,7 +18,7 @@ limitations under the License.
   <v-list>
     <v-list-item v-show="!isAnyTileVisible">
       <v-list-item-action>
-        <v-icon class="cyan--text text--darken-2">mdi-alert-circle-outline</v-icon>
+        <v-icon class="primary--text">mdi-alert-circle-outline</v-icon>
       </v-list-item-action>
       <v-list-item-content>
         <v-list-item-title>

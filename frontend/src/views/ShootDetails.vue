@@ -23,21 +23,21 @@ limitations under the License.
       </v-col>
       <v-col cols="12" md="6">
         <v-card v-if="canGetSecrets" class="mb-4">
-          <v-toolbar flat dark dense color="cyan darken-2">
+          <v-toolbar flat dark dense color="primary">
             <v-toolbar-title class="subtitle-1">Access</v-toolbar-title>
           </v-toolbar>
           <shoot-access-card :shootItem="shootItem"></shoot-access-card>
         </v-card>
         <shoot-monitoring-card :shootItem="shootItem"></shoot-monitoring-card>
         <v-card v-if="isLoggingFeatureGateEnabled && isAdmin"  class="mt-4">
-          <v-toolbar flat dark dense color="cyan darken-2">
+          <v-toolbar flat dark dense color="primary">
             <v-toolbar-title class="subtitle-1">Logging</v-toolbar-title>
           </v-toolbar>
           <shoot-logging :shootItem="shootItem"></shoot-logging>
         </v-card>
         <shoot-infrastructure-card :shootItem="shootItem" class="mt-4"></shoot-infrastructure-card>
         <v-card v-if="isKymaFeatureEnabled && isKymaAddonEnabled" class="mt-4">
-          <v-toolbar flat dark dense color="cyan darken-2">
+          <v-toolbar flat dark dense color="primary">
             <v-toolbar-title class="subtitle-1">{{kymaTitle}}</v-toolbar-title>
           </v-toolbar>
           <shoot-addon-kyma-card :shootItem="shootItem"></shoot-addon-kyma-card>
