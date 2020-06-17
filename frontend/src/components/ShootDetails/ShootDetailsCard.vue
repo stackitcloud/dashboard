@@ -173,8 +173,8 @@ limitations under the License.
           </v-list-item-action>
         </v-list-item>
       </template>
-      <v-divider inset></v-divider>
-      <v-list-item>
+      <v-divider inset v-if="isAdmin"></v-divider>
+      <v-list-item v-if="isAdmin">
         <v-list-item-icon>
           <v-icon color="primary">mdi-puzzle</v-icon>
         </v-list-item-icon>
@@ -251,7 +251,8 @@ export default {
       'cfg'
     ]),
     ...mapGetters([
-      'canGetSecrets'
+      'canGetSecrets',
+      'isAdmin'
     ]),
     expirationTimestamp () {
       return this.shootAnnotations['shoot.gardener.cloud/expiration-timestamp'] || this.shootAnnotations['shoot.garden.sapcloud.io/expirationTimestamp']

@@ -76,7 +76,7 @@ limitations under the License.
           ></manage-workers>
        </v-card-text>
       </v-card>
-      <v-card flat class="mt-4">
+      <v-card flat class="mt-4" v-if="isAdmin">
         <v-card-title class="subtitle-1 white--text primary cardTitle">
           Add-Ons (not actively monitored and provided on a best-effort basis only)
         </v-card-title>
@@ -190,7 +190,8 @@ export default {
       'initialNewShootResource',
       'infrastructureSecretsByCloudProfileName',
       'zonesByCloudProfileNameAndRegion',
-      'isKymaFeatureEnabled'
+      'isKymaFeatureEnabled',
+      'isAdmin'
     ]),
     valid () {
       return this.infrastructureValid &&
