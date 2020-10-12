@@ -189,9 +189,9 @@ export default {
         case 'red':
           return 'red darken-2 grey--text text--lighten-4'
         case 'orange':
-          return 'orange darken-2 grey--text text--lighten-4'
+          return 'primary grey--text text--lighten-2'
         default:
-          return 'cyan darken-2 grey--text text--lighten-4'
+          return 'primary grey--text text--lighten-2'
       }
     },
     textColorClassForString (textColorClass) {
@@ -199,9 +199,9 @@ export default {
         case 'red':
           return 'red--text text--darken-2'
         case 'orange':
-          return 'orange--text text--darken-2'
+          return 'primary grey--text text--lighten-2'
         default:
-          return 'cyan--text text--darken-2'
+          return 'primary grey--text text--lighten-2'
       }
     },
     async resolveAction (value) {
