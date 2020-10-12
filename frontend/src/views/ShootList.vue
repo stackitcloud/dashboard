@@ -268,7 +268,7 @@ export default {
       this.clearSelectedShootWithDelay()
     },
     checkboxColor (checked) {
-      return checked ? 'cyan darken-2' : ''
+      return checked ? 'primary' : ''
     },
     checkboxIcon (checked) {
       return checked ? 'mdi-checkbox-marked' : 'mdi-checkbox-blank-outline'

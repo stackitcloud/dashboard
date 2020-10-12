@@ -38,7 +38,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'cyan darken-2'
+      default: 'primary'
     }
   },
   computed: {

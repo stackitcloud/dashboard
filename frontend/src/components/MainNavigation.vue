@@ -20,7 +20,6 @@ limitations under the License.
       fixed
       app
       :mobile-breakpoint="400"
-      dark
     >
       <div class="teaser">
         <div class="content center">
@@ -28,15 +27,14 @@ limitations under the License.
             <v-icon>mdi-chevron-double-left</v-icon>
           </v-btn>
           <a href="/">
-            <img src="../assets/logo.svg" class="logo">
-            <h1 class="white--text">Gardener <span class="version">{{version}}</span></h1>
-            <h2>Universal Kubernetes at Scale</h2>
+            <img src="../assets/logo-beta.svg" class="logo">
+            <h2 class="white--text">Kubernetes Engine</h2>
           </a>
         </div>
       </div>
       <template v-if="projectList.length">
         <v-menu
-          light
+          light1
           attach
           offset-y
           left
@@ -51,7 +49,7 @@ limitations under the License.
             <v-btn
               v-on="on"
               block
-              class="project-selector elevation-4 white--text"
+              class="project-selector elevation-4 primary--text"
               @keydown.down="highlightProjectWithKeys('down')"
               @keydown.up="highlightProjectWithKeys('up')"
               @keyup.enter="navigateToHighlightedProject"
@@ -59,7 +57,7 @@ limitations under the License.
               <v-icon class="pr-6">mdi-grid-large</v-icon>
               <span class="ml-2" :class="{ placeholder: !project }" >{{projectName}}</span>
               <template v-if="project">
-                <stale-project-warning :project="project" small color="white"></stale-project-warning>
+                <stale-project-warning :project="project" small color="primary--text"></stale-project-warning>
               </template>
               <v-spacer></v-spacer>
               <v-icon right>{{projectMenuIcon}}</v-icon>
@@ -97,15 +95,15 @@ limitations under the License.
                 class="project-list-tile"
                 v-for="project in visibleProjectList"
                 @click="onProjectClick($event, project)"
-                :class="{'grey lighten-4' : isHighlightedProject(project)}"
+                :class="{'primary' : isHighlightedProject(project)}"
                 :key="project.metadata.name"
                 :data-g-project-name="project.metadata.name"
               >
                 <v-list-item-avatar>
-                  <v-icon v-if="project.metadata.name === projectName" color="teal">check</v-icon>
+                  <v-icon v-if="project.metadata.name === projectName" color="primary">check</v-icon>
                 </v-list-item-avatar>
                 <v-list-item-content>
-                  <v-list-item-title class="project-name">{{project.metadata.name}}</v-list-item-title>
+                  <v-list-item-title class="project-name primary--text">{{project.metadata.name}}</v-list-item-title>
                   <v-list-item-subtitle class="project-owner">{{getProjectOwner(project)}}</v-list-item-subtitle>
                 </v-list-item-content>
                 <v-list-item-action>
@@ -113,14 +111,14 @@ limitations under the License.
                 </v-list-item-action>
               </v-list-item>
             </v-list>
-            <v-card-actions class="grey lighten-3">
+            <v-card-actions class="accent">
               <v-tooltip top :disabled="canCreateProject" style="width: 100%">
                 <template v-slot:activator="{ on }">
                   <div v-on="on">
                     <v-btn
                       text
                       block
-                      class="project-add text-left teal--text"
+                      class="project-add text-left primary--text"
                       :disabled="!canCreateProject"
                       @click.stop="openProjectDialog"
                     >
@@ -138,20 +136,20 @@ limitations under the License.
       <v-list ref="mainMenu">
         <v-list-item :to="{name: 'Home'}" exact v-if="hasNoProjects">
           <v-list-item-action>
-            <v-icon class="white--text">mdi-home-outline</v-icon>
+            <v-icon class="primary--text">mdi-home-outline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="subtitle-1">Home</v-list-item-title>
+            <v-list-item-title class="primary--text">Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <template v-if="namespace">
           <template v-for="(route, index) in routes">
             <v-list-item v-if="!route.meta.menu.hidden" :to="namespacedRoute(route)" :key="index">
               <v-list-item-action>
-                <v-icon small class="white--text">{{route.meta.menu.icon}}</v-icon>
+                <v-icon small class="primary--text">{{route.meta.menu.icon}}</v-icon>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title class="subtitle-1" >{{route.meta.menu.title}}</v-list-item-title>
+                <v-list-item-title class="primary--text" >{{route.meta.menu.title}}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </template>
@@ -472,17 +470,16 @@ export default {
         position: relative;
         height: $teaserHeight;
         overflow: hidden;
-        background-color: #212121;
+        background-color: #004E5A;
         text-align: center;
 
         a {
           text-decoration: none;
 
           .logo {
-            height: 80px;
+            height: 35px;
             pointer-events: none;
             margin: 21px 0 0 0;
-            transform: translateX(30%);
           }
 
           h1 {

@@ -47,7 +47,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'teal'
+      default: 'primary'
     }
   },
   computed: {

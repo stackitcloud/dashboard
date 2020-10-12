@@ -54,7 +54,7 @@ export default {
     },
     textColor () {
       if (!this.isCritical) {
-        return 'cyan darken-2'
+        return 'primary'
       } else {
         return 'white'
       }
