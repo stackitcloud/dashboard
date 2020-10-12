@@ -26,8 +26,6 @@ import {
   shootListBreadcrumbs,
   shootItemBreadcrumbs,
   shootItemTerminalBreadcrumbs,
-  secretItemBreadcrumbs,
-  secretsBreadcrumbs,
   newShootBreadcrumbs,
   newShootEditorBreadcrumbs,
   administrationBreadcrumbs,
@@ -48,7 +46,7 @@ const ShootItemTerminal = () => import('@/views/ShootItemTerminal')
 const ShootItem = () => import('@/views/ShootItem')
 const ShootItemEditor = () => import('@/views/ShootItemEditor')
 const NewShootEditor = () => import('@/views/NewShootEditor')
-const Secrets = () => import('@/views/Secrets')
+// const Secrets = () => import('@/views/Secrets')
 const Members = () => import('@/views/Members')
 const Account = () => import('@/views/Account')
 const Administration = () => import('@/views/Administration')
@@ -104,8 +102,6 @@ function projectHierarchy (context, path) {
     children: [
       { path: '', redirect: 'shoots' },
       shootListHierarchy(context, 'shoots'),
-      secretListRoute(context, 'secrets'),
-      secretItemRoute(context, 'secrets/:name'),
       membersRoute(context, 'members'),
       administrationRoute(context, 'administration'),
       { path: 'term', redirect: 'term/garden' },
@@ -373,34 +369,34 @@ function shootItemTerminalRoute ({ getters }, path) {
   }
 }
 
-function secretListRoute ({ getters }, path) {
-  return {
-    path,
-    name: 'Secrets',
-    component: Secrets,
-    meta: {
-      menu: {
-        title: 'Secrets',
-        icon: 'mdi-key',
-        get hidden () {
-          return !getters.canGetSecrets
-        }
-      },
-      breadcrumbs: secretsBreadcrumbs
-    }
-  }
-}
+// function secretListRoute ({ getters }, path) {
+//   return {
+//     path,
+//     name: 'Secrets',
+//     component: Secrets,
+//     meta: {
+//       menu: {
+//         title: 'Secrets',
+//         icon: 'mdi-key',
+//         get hidden () {
+//           return !getters.canGetSecrets
+//         }
+//       },
+//       breadcrumbs: secretsBreadcrumbs
+//     }
+//   }
+// }
 
-function secretItemRoute (context, path) {
-  return {
-    path,
-    name: 'Secret',
-    component: Secrets,
-    meta: {
-      breadcrumbs: secretItemBreadcrumbs
-    }
-  }
-}
+// function secretItemRoute (context, path) {
+//   return {
+//     path,
+//     name: 'Secret',
+//     component: Secrets,
+//     meta: {
+//       breadcrumbs: secretItemBreadcrumbs
+//     }
+//   }
+// }
 
 function membersRoute (context, path) {
   return {

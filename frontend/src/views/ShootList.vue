@@ -18,7 +18,6 @@ limitations under the License.
   <v-container fluid class="shootlist">
     <v-card class="mr-extra">
       <v-toolbar flat height="72" color="primary">
-        <img src="../assets/certified_kubernetes_white.svg" height="60" class="ml-1 mr-3">
         <v-toolbar-title class="white--text">
           <div class="headline">Kubernetes Clusters</div>
           <div class="subtitle-1">{{headlineSubtitle}}</div>
@@ -160,7 +159,7 @@ limitations under the License.
 
       <v-dialog v-model="clusterAccessDialog" max-width="600">
         <v-card>
-          <v-card-title class="teal darken-1 grey--text text--lighten-4">
+          <v-card-title class="primary grey--text text--lighten-4">
             <div class="headline">Cluster Access <code class="cluster_name">{{currentName}}</code></div>
             <v-spacer></v-spacer>
             <v-btn icon class="grey--text text--lighten-4" @click.native="hideDialog">
