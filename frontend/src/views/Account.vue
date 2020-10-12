@@ -19,18 +19,18 @@ limitations under the License.
     <v-row>
       <v-col cols="12" md="6">
         <v-card>
-          <v-toolbar flat dark dense class="teal darken-2">
+          <v-toolbar flat dark dense class="primary">
             <v-toolbar-title>Details</v-toolbar-title>
           </v-toolbar>
           <v-list dense>
             <v-list-item>
               <v-list-item-avatar>
-                <v-icon color="teal darken-2">{{icon}}</v-icon>
+                <v-icon color="primary">{{icon}}</v-icon>
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title class="label pb-2">User</v-list-item-title>
                 <v-list-item-subtitle class="content pb-2">
-                  <account-avatar :account-name="username" mail-to color="teal darken-2" :size="32"/>
+                  <account-avatar :account-name="username" mail-to color="primary" :size="32"/>
                 </v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
@@ -63,7 +63,7 @@ limitations under the License.
           <v-list>
             <v-list-item>
               <v-list-item-avatar>
-                <v-icon color="teal darken-2">timelapse</v-icon>
+                <v-icon color="primary">timelapse</v-icon>
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title class="label">Session</v-list-item-title>
@@ -77,13 +77,13 @@ limitations under the License.
       </v-col>
       <v-col cols="12" md="6">
         <v-card>
-          <v-toolbar flat dark dense class="teal darken-2">
+          <v-toolbar flat dark dense class="primary">
             <v-toolbar-title>Access</v-toolbar-title>
           </v-toolbar>
           <v-list>
             <v-list-item>
               <v-list-item-avatar>
-                <v-icon color="teal darken-2">mdi-key </v-icon>
+                <v-icon color="primary">mdi-key </v-icon>
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title>Token</v-list-item-title>
@@ -97,7 +97,7 @@ limitations under the License.
               <v-divider inset class="my-2"/>
               <v-list-item>
                 <v-list-item-avatar>
-                  <v-icon color="teal darken-2">insert_drive_file</v-icon>
+                  <v-icon color="primary">insert_drive_file</v-icon>
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title>Kubeconfig</v-list-item-title>
@@ -132,13 +132,13 @@ limitations under the License.
                   <v-card-text class="pt-0">
                     <div class="grey--text text--darken-2">
                       The downloaded <tt>kubeconfig</tt> will initiate
-                      <external-link url="https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens" color="teal darken-2">
+                      <external-link url="https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens" color="primary">
                         OIDC
                       </external-link>
                       authentication via <tt>kubelogin</tt>.
                       If not already done, please install <tt>kubelogin</tt>
                       according to the
-                      <external-link url="https://github.com/int128/kubelogin#setup" color="teal darken-2">
+                      <external-link url="https://github.com/int128/kubelogin#setup" color="primary">
                         setup instructions
                       </external-link>.
                       For more information please refer to the <tt>kubelogin</tt> documentation.
