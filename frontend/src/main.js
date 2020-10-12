@@ -107,7 +107,25 @@ function start ({ Vue, Vuetify, Vuelidate, Snotify, VueCookie, ShortKey, App, st
 
   Vue.config.productionTip = false
 
-  const vuetify = new Vuetify({})
+  const vuetify = new Vuetify({
+    icons: {
+      iconfont: 'md'
+    },
+    theme: {
+      themes: {
+        light: {
+          primary: '#004E5A',
+          secondary: '#F8EC17',
+          accent: '#E5EDEF'
+        },
+        dark: {
+          primary: '#004E5A',
+          secondary: '#F8EC17',
+          accent: '#E5EDEF'
+        }
+      }
+    }
+  })
 
   new Vue({
     vuetify,
