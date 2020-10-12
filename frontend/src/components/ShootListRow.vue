@@ -17,14 +17,14 @@ limitations under the License.
 <template>
   <tr>
     <td class="nowrap" v-if="this.headerVisible['project']">
-      <router-link class="cyan--text text--darken-2" :to="{ name: 'ShootList', params: { namespace: shootNamespace } }">
+      <router-link class="primary--text" :to="{ name: 'ShootList', params: { namespace: shootNamespace } }">
         {{ shootProjectName }}
       </router-link>
     </td>
     <td class="nowrap" v-if="this.headerVisible['name']">
       <v-row align="center" class="pa-0 ma-0 fill-height flex-nowrap">
         <v-col class="grow pa-0 ma-0">
-          <router-link class="cyan--text text--darken-2" :to="{ name: 'ShootItem', params: { name: shootName, namespace: shootNamespace } }">
+          <router-link class="primary--text" :to="{ name: 'ShootItem', params: { name: shootName, namespace: shootNamespace } }">
             {{ shootName }}
           </router-link>
         </v-col>
@@ -91,7 +91,7 @@ limitations under the License.
       <v-tooltip top>
         <template v-slot:activator="{ on }">
           <div v-on="on">
-            <router-link class="cyan--text text--darken-2" :to="{ name: 'ShootItem', params: { name: shootName, namespace: shootNamespace } }">
+            <router-link class="primary--text" :to="{ name: 'ShootItem', params: { name: shootName, namespace: shootNamespace } }">
               <time-string :date-time="shootLastUpdatedTicketTimestamp" :pointInTime="-1"></time-string>
             </router-link>
           </div>
@@ -112,7 +112,7 @@ limitations under the License.
         <v-tooltip top v-if="canGetSecrets">
           <template v-slot:activator="{ on }">
             <div v-on="on">
-              <v-btn small icon class="cyan--text text--darken-2" :disabled="isClusterAccessDialogDisabled" @click="showDialog('access')">
+              <v-btn small icon class="primary--text" :disabled="isClusterAccessDialogDisabled" @click="showDialog('access')">
                 <v-icon size="22">mdi-key</v-icon>
               </v-btn>
             </div>

@@ -70,7 +70,7 @@ limitations under the License.
               </template>
               Dashboard is not running for hibernated clusters
             </v-tooltip>
-            <a v-else :href="dashboardUrl" target="_blank" class="cyan--text text--darken-2">{{dashboardUrlText}}</a>
+            <a v-else :href="dashboardUrl" target="_blank" class="primary--text">{{dashboardUrlText}}</a>
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>

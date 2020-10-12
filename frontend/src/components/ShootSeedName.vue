@@ -21,13 +21,13 @@ limitations under the License.
         <div v-on="on">
           <template v-if="isControlPlaneMigrating">
             <v-progress-circular indeterminate size=12 width=2 color="primary" class="mr-1"></v-progress-circular>
-            <router-link v-if="canLinkToSeed" class="cyan--text text--darken-2" :to="{ name: 'ShootItem', params: { name: shootStatusSeedName, namespace:'garden' } }">
+            <router-link v-if="canLinkToSeed" class="primary--text" :to="{ name: 'ShootItem', params: { name: shootStatusSeedName, namespace:'garden' } }">
               <span>{{shootStatusSeedName}}</span>
             </router-link>
             <span v-else>{{shootSeedName}}</span>
             <v-icon small class="mx-1">mdi-arrow-right</v-icon>
           </template>
-          <router-link v-if="canLinkToSeed" class="cyan--text text--darken-2" :to="{ name: 'ShootItem', params: { name: shootSeedName, namespace:'garden' } }">
+          <router-link v-if="canLinkToSeed" class="primary--text" :to="{ name: 'ShootItem', params: { name: shootSeedName, namespace:'garden' } }">
             <span>{{shootSeedName}}</span>
           </router-link>
           <span v-else>{{shootSeedName}}</span>

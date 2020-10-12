@@ -53,13 +53,13 @@ limitations under the License.
           icon
           class="ml-1"
           color="primary">
-          <v-icon class="cyan--text text--darken-2">add</v-icon>
+          <v-icon class="primary--text">add</v-icon>
         </v-btn>
         <v-btn
           :disabled="!(allMachineTypes.length > 0)"
           @click="addWorker"
           text
-          class="cyan--text text--darken-2">
+          class="primary--text">
           Add Worker Group
         </v-btn>
       </v-col>

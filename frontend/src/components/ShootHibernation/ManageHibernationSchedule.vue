@@ -38,7 +38,7 @@ limitations under the License.
             fab
             icon
             color="primary">
-            <v-icon class="cyan--text text--darken-2">add</v-icon>
+            <v-icon class="primary--text">add</v-icon>
           </v-btn>
           <v-btn
             @click="addSchedule"

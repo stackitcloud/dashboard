@@ -30,7 +30,7 @@ limitations under the License.
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title>{{displayName(technicalContact)}}</v-list-item-title>
-            <v-list-item-subtitle><a :href="'mailto:'+technicalContact" class="cyan--text text--darken-2">{{technicalContact}}</a></v-list-item-subtitle>
+            <v-list-item-subtitle><a :href="'mailto:'+technicalContact" class="primary--text">{{technicalContact}}</a></v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>

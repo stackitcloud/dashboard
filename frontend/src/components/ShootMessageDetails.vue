@@ -89,7 +89,7 @@ limitations under the License.
                   <span v-if="infraAccountError">There is a problem with your secret
                     <code>
                       <router-link v-if="canLinkToSecret"
-                        class="cyan--text text--darken-2"
+                        class="primary--text"
                         :to="{ name: 'Secret', params: { name: secretName, namespace: namespace } }"
                       >
                         <span>{{secretName}}</span>

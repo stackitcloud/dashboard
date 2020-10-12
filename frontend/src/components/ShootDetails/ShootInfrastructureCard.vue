@@ -39,7 +39,7 @@ limitations under the License.
           <v-list-item-subtitle>Credential</v-list-item-subtitle>
           <v-list-item-title class="pt-1">
             <router-link v-if="canLinkToSecret"
-              class="cyan--text text--darken-2"
+              class="primary--text"
               :to="{ name: 'Secret', params: { name: shootSecretBindingName, namespace: shootNamespace } }"
             >
               <span class="subtitle-1">{{shootSecretBindingName}}</span>

@@ -28,7 +28,7 @@ limitations under the License.
           </template>
           {{appTitle}} is not running for hibernated clusters
         </v-tooltip>
-        <a v-else :href="url" target="_blank" class="cyan--text text--darken-2">{{urlText}}</a>
+        <a v-else :href="url" target="_blank" class="primary--text">{{urlText}}</a>
       </v-list-item-title>
     </v-list-item-content>
   </v-list-item>

@@ -26,7 +26,7 @@ limitations under the License.
           <span v-if="isCurrentUser">(me)</span>
         </v-list-item-title>
         <v-list-item-subtitle>
-          <a v-if="isEmail" :href="`mailto:${username}`" class="cyan--text text--darken-2">{{username}}</a>
+          <a v-if="isEmail" :href="`mailto:${username}`" class="primary--text">{{username}}</a>
           <span v-else>{{username}}</span>
         </v-list-item-subtitle>
       </v-list-item-content>
