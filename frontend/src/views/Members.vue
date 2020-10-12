@@ -17,7 +17,7 @@ limitations under the License.
 <template>
   <v-container fluid>
     <v-card class="mr-extra">
-      <v-toolbar flat color="teal darken-2">
+      <v-toolbar flat color="primary">
         <v-icon class="white--text pr-2">mdi-account</v-icon>
         <v-toolbar-title class="subtitle-1 white--text">
           Technical Contact
@@ -45,7 +45,7 @@ limitations under the License.
     </v-card>
 
     <v-card class="mr-extra mt-6">
-      <v-toolbar flat color="green darken-2">
+      <v-toolbar flat color="primary">
         <v-icon class="white--text pr-2">mdi-account-multiple</v-icon>
         <v-toolbar-title class="subtitle-1 white--text">
           Project Users
@@ -102,7 +102,7 @@ limitations under the License.
     </v-card>
 
     <v-card class="mr-extra mt-6">
-      <v-toolbar flat color="blue-grey">
+      <v-toolbar flat color="primary">
         <v-icon class="white--text pr-2">mdi-monitor-multiple</v-icon>
         <v-toolbar-title class="subtitle-1 white--text">
           Service Accounts
@@ -182,16 +182,16 @@ limitations under the License.
     <v-fab-transition v-if="canManageServiceAccountMembers || canManageMembers">
       <v-speed-dial v-model="fab" v-show="floatingButton" fixed bottom right direction="top" transition="slide-y-reverse-transition"  >
         <template v-slot:activator>
-          <v-btn v-model="fab" color="teal darken-2" dark fab>
+          <v-btn v-model="fab" color="primary" dark fab>
             <v-icon v-if="fab">close</v-icon>
             <v-icon v-else>add</v-icon>
           </v-btn>
         </template>
-        <v-btn v-if="canManageServiceAccountMembers" fab small color="grey lighten-2" light @click="openServiceAccountAddDialog">
-          <v-icon color="blue-grey darken-2">mdi-monitor</v-icon>
+        <v-btn v-if="canManageServiceAccountMembers" fab small color="secondary" @click="openServiceAccountAddDialog">
+          <v-icon color="primary">mdi-monitor</v-icon>
         </v-btn>
-        <v-btn v-if="canManageMembers" fab small color="grey lighten-2" @click="openUserAddDialog">
-          <v-icon color="green darken-2">person</v-icon>
+        <v-btn v-if="canManageMembers" fab small color="secondary" @click="openUserAddDialog">
+          <v-icon color="primary">person</v-icon>
         </v-btn>
       </v-speed-dial>
     </v-fab-transition>
