@@ -119,7 +119,7 @@ limitations under the License.
     <v-divider></v-divider>
     <div class="d-flex align-center justify-end toolbar">
       <v-divider vertical></v-divider>
-      <v-btn text @click.native.stop="createClicked()" :disabled="!valid" color="cyan darken-2">Create</v-btn>
+      <v-btn text @click.native.stop="createClicked()" :disabled="!valid" color="primary">Create</v-btn>
     </div>
     <confirm-dialog ref="confirmDialog"></confirm-dialog>
   </div>

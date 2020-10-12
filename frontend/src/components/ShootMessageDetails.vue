@@ -18,7 +18,7 @@ limitations under the License.
   <v-list>
     <v-list-item>
       <v-list-item-icon>
-        <v-icon color="cyan darken-2">info_outline</v-icon>
+        <v-icon color="primary">info_outline</v-icon>
       </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-subtitle>Status</v-list-item-subtitle>
@@ -31,7 +31,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">mdi-post-outline</v-icon>
+          <v-icon color="primary">mdi-post-outline</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>Last Message</v-list-item-subtitle>
@@ -44,7 +44,7 @@ limitations under the License.
     <v-divider inset></v-divider>
     <v-list-item v-if="lastUpdateTime">
       <v-list-item-icon>
-        <v-icon color="cyan darken-2">mdi-clock-outline</v-icon>
+        <v-icon color="primary">mdi-clock-outline</v-icon>
       </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-subtitle>Last Updated</v-list-item-subtitle>

@@ -17,7 +17,7 @@ limitations under the License.
 <template>
   <v-list-item>
     <v-list-item-icon>
-      <v-icon v-if="icon" color="cyan darken-2">{{icon}}</v-icon>
+      <v-icon v-if="icon" color="primary">{{icon}}</v-icon>
     </v-list-item-icon>
     <v-list-item-content :class="contentClass">
       <v-list-item-subtitle>{{appTitle}}</v-list-item-subtitle>

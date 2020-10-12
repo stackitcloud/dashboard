@@ -16,7 +16,7 @@ limitations under the License.
 
 <template>
   <v-card v-if="items.length">
-    <v-toolbar flat dark dense color="cyan darken-2">
+    <v-toolbar flat dark dense color="primary">
       <v-toolbar-title class="subtitle-1">External Tools</v-toolbar-title>
     </v-toolbar>
     <v-list>
@@ -24,12 +24,12 @@ limitations under the License.
         <v-divider v-if="index" :key="index" inset class="my-2"></v-divider>
         <v-list-item :key="title">
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">{{icon}}</v-icon>
+            <v-icon color="primary">{{icon}}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>{{title}}</v-list-item-subtitle>
             <v-list-item-title>
-              <external-link :url="expandUrl(url)" color="cyan darken-2" :size="16">
+              <external-link :url="expandUrl(url)" color="primary" :size="16">
                 {{expandUrl(url)}}
               </external-link>
             </v-list-item-title>

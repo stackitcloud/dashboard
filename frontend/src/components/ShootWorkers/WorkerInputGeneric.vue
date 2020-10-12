@@ -20,7 +20,7 @@ limitations under the License.
     <div class="d-flex flex-wrap">
       <div class="regularInput">
         <v-text-field
-          color="cyan darken-2"
+          color="primary"
           :error-messages="getErrorMessages('worker.name')"
           @input="onInputName"
           @blur="$v.worker.name.$touch()"
@@ -58,7 +58,7 @@ limitations under the License.
       <div v-if="volumeInCloudProfile" class="smallInput">
         <size-input
           :min="minimumVolumeSize"
-          color="cyan darken-2"
+          color="primary"
           :error-messages="getErrorMessages('worker.volume.size')"
           @input="onInputVolumeSize"
           @blur="$v.worker.volume.size.$touch()"
@@ -69,7 +69,7 @@ limitations under the License.
       <div class="smallInput">
         <v-text-field
           min="0"
-          color="cyan darken-2"
+          color="primary"
           :error-messages="getErrorMessages('worker.minimum')"
           @input="onInputminimum"
           @blur="$v.worker.minimum.$touch()"
@@ -80,7 +80,7 @@ limitations under the License.
       <div class="smallInput">
         <v-text-field
           min="0"
-          color="cyan darken-2"
+          color="primary"
           :error-messages="getErrorMessages('worker.maximum')"
           @input="onInputmaximum"
           @blur="$v.worker.maximum.$touch()"
@@ -92,7 +92,7 @@ limitations under the License.
       <div class="smallInput">
         <v-text-field
           min="0"
-          color="cyan darken-2"
+          color="primary"
           :error-messages="getErrorMessages('worker.maxSurge')"
           @input="onInputMaxSurge"
           @blur="$v.worker.maxSurge.$touch()"
@@ -102,8 +102,8 @@ limitations under the License.
 
       <div class="regularInput" v-if="zonedCluster">
         <v-select
-          color="cyan darken-2"
-          item-color="cyan darken-2"
+          color="primary"
+          item-color="primary"
           label="Zone"
           :items="zoneItems"
           :error-messages="getErrorMessages('worker.zones')"

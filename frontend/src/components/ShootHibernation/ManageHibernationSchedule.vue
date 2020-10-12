@@ -37,13 +37,13 @@ limitations under the License.
             outlined
             fab
             icon
-            color="cyan darken-2">
+            color="primary">
             <v-icon class="cyan--text text--darken-2">add</v-icon>
           </v-btn>
           <v-btn
             @click="addSchedule"
             text
-            color="cyan darken-2">
+            color="primary">
             Add Hibernation Schedule
           </v-btn>
         </v-col>
@@ -53,7 +53,7 @@ limitations under the License.
       <v-col>
         <v-checkbox
           v-model="confirmNoSchedule"
-          color="cyan darken-2"
+          color="primary"
           class="my-0"
           :label="noScheduleCheckboxLabel"
           hint="Check the box above to avoid getting prompted for setting a hibernation schedule"

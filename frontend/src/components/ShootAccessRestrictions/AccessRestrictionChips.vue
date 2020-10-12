@@ -27,7 +27,7 @@ limitations under the License.
             v-on="on"
             small
             outlined
-            color="cyan darken-2"
+            color="primary"
             class="mr-2 mb-1"
           >{{title}}</v-chip>
         </template>
@@ -45,7 +45,7 @@ limitations under the License.
             v-on="on"
             small
             outlined
-            color="cyan darken-2"
+            color="primary"
             class="mr-2"
           >{{title}}</v-chip>
         </template>

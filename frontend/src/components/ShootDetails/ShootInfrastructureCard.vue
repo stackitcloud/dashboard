@@ -16,13 +16,13 @@ limitations under the License.
 
 <template>
   <v-card>
-    <v-toolbar flat dark dense color="cyan darken-2">
+    <v-toolbar flat dark dense color="primary">
       <v-toolbar-title class="subtitle-1">Infrastructure</v-toolbar-title>
     </v-toolbar>
     <v-list>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">cloud_queue</v-icon>
+          <v-icon color="primary">cloud_queue</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>
@@ -52,7 +52,7 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">spa</v-icon>
+            <v-icon color="primary">spa</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>Seed</v-list-item-subtitle>
@@ -80,7 +80,7 @@ limitations under the License.
       <v-divider inset></v-divider>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon color="cyan darken-2">settings_ethernet</v-icon>
+          <v-icon color="primary">settings_ethernet</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-subtitle>Pods CIDR</v-list-item-subtitle>
@@ -111,7 +111,7 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">mdi-earth</v-icon>
+            <v-icon color="primary">mdi-earth</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>Ingress Domain</v-list-item-subtitle>
@@ -125,7 +125,7 @@ limitations under the License.
         <v-divider inset></v-divider>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon color="cyan darken-2">mdi-ip-network-outline</v-icon>
+            <v-icon color="primary">mdi-ip-network-outline</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-subtitle>Available Load Balancer Classes</v-list-item-subtitle>

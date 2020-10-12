@@ -52,7 +52,7 @@ limitations under the License.
           fab
           icon
           class="ml-1"
-          color="cyan darken-2">
+          color="primary">
           <v-icon class="cyan--text text--darken-2">add</v-icon>
         </v-btn>
         <v-btn

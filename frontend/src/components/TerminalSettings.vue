@@ -17,7 +17,7 @@ limitations under the License.
 <template>
   <div>
     <v-text-field
-      color="cyan darken-2"
+      color="primary"
       v-model="selectedContainerImage"
       label="Image"
       hint="Image to be used for the Container"
@@ -39,17 +39,17 @@ limitations under the License.
         <v-radio
           label="Infrastructure (Seed)"
           :value="false"
-          color="cyan darken-2"
+          color="primary"
         ></v-radio>
         <v-radio
           label="Cluster"
           :value="true"
-          color="cyan darken-2"
+          color="primary"
         ></v-radio>
       </v-radio-group>
       <v-switch
         :disabled="!selectedRunOnShootWorker"
-        color="cyan darken-2"
+        color="primary"
         v-model="selectedPrivilegedMode"
         label="Privileged"
         hint="Enable to schedule a privileged Container, with hostPID and hostNetwork enabled. The host root filesystem will be mounted under the path /hostroot."
@@ -60,8 +60,8 @@ limitations under the License.
       <v-select
         :disabled="!selectedRunOnShootWorker"
         no-data-text="No workers available"
-        color="cyan darken-2"
-        item-color="cyan darken-2"
+        color="primary"
+        item-color="primary"
         label="Node"
         placeholder="Change worker node..."
         :items="shootNodes"
@@ -98,7 +98,7 @@ limitations under the License.
         class="ml-6 mt-6 mb-2"
         :value="true"
         type="info"
-        color="cyan darken-2"
+        color="primary"
         outlined
       >
         <strong>Terminal will be running in an untrusted environment!</strong><br>

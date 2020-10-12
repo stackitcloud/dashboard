@@ -23,7 +23,7 @@ limitations under the License.
     <v-container>
       <span class="font-weight-bold">{{login}}</span> created this
       <a :href="ticketHtmlUrl" target="_blank" class="cyan--text text--darken-2">ticket</a>
-      <a :href="ticketHtmlUrl" target="_blank" class="link-icon"><v-icon color="cyan darken-2" class="link-icon">mdi-open-in-new</v-icon></a>
+      <a :href="ticketHtmlUrl" target="_blank" class="link-icon"><v-icon color="primary" class="link-icon">mdi-open-in-new</v-icon></a>
       <time-string :dateTime="ticket.metadata.created_at" :pointInTime="-1"></time-string>
     </v-container>
     <v-container>
@@ -34,7 +34,7 @@ limitations under the License.
       <v-spacer></v-spacer>
       <v-btn text class="action-button cyan--text text--darken-2" :href="addCommentLink" target="_blank" title="Add Comment">
         Add Comment
-        <v-icon color="cyan darken-2" class="link-icon pl-2">mdi-open-in-new</v-icon>
+        <v-icon color="primary" class="link-icon pl-2">mdi-open-in-new</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
     </v-card-actions>

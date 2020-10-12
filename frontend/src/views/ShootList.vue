@@ -17,7 +17,7 @@ limitations under the License.
 <template>
   <v-container fluid class="shootlist">
     <v-card class="mr-extra">
-      <v-toolbar flat height="72" color="cyan darken-2">
+      <v-toolbar flat height="72" color="primary">
         <img src="../assets/certified_kubernetes_white.svg" height="60" class="ml-1 mr-3">
         <v-toolbar-title class="white--text">
           <div class="headline">Kubernetes Clusters</div>
@@ -26,7 +26,7 @@ limitations under the License.
         <v-spacer></v-spacer>
         <v-text-field v-if="search || items.length > 3"
           prepend-inner-icon="search"
-          color="cyan darken-2"
+          color="primary"
           label="Search"
           clearable
           hide-details
@@ -172,7 +172,7 @@ limitations under the License.
       </v-dialog>
     </v-card>
     <v-fab-transition v-if="canCreateShoots">
-      <v-btn v-if="projectScope" class="cyan darken-2" dark fab fixed bottom right v-show="floatingButton" :to="{ name: 'NewShoot', params: {  namespace } }">
+      <v-btn v-if="projectScope" class="primary" dark fab fixed bottom right v-show="floatingButton" :to="{ name: 'NewShoot', params: {  namespace } }">
         <v-icon dark ref="add">add</v-icon>
       </v-btn>
     </v-fab-transition>

@@ -20,7 +20,7 @@ limitations under the License.
       <v-col cols="3">
         <v-text-field
           ref="name"
-          color="cyan darken-2"
+          color="primary"
           label="Cluster Name"
           :counter="maxShootNameLength"
           v-model="name"
@@ -33,8 +33,8 @@ limitations under the License.
       <v-col cols="3">
         <hint-colorizer hintColor="orange">
           <v-select
-            color="cyan darken-2"
-            item-color="cyan darken-2"
+            color="primary"
+            item-color="primary"
             label="Kubernetes Version"
             item-text="version"
             item-value="version"

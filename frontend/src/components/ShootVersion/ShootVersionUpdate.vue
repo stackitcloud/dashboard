@@ -19,9 +19,9 @@ limitations under the License.
     <hint-colorizer hintColor="orange">
       <v-select
         :items="items"
-        color="cyan darken-2"
+        color="primary"
         class="mb-2"
-        item-color="cyan darken-2"
+        item-color="primary"
         item-value="version"
         v-model="selectedItem"
         :label="label"

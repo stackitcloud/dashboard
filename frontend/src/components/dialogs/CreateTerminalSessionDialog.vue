@@ -25,7 +25,7 @@ limitations under the License.
   >
     <template v-slot:caption>Create Terminal Session</template>
     <template v-slot:message>
-      <v-tabs v-model="tab" color="cyan darken-2">
+      <v-tabs v-model="tab" color="primary">
         <v-tab key="target-tab" href="#target-tab">Terminal</v-tab>
         <v-tab v-if="isTerminalShortcutsFeatureEnabled" key="shortcut-tab" href="#shortcut-tab">Terminal Shortcuts</v-tab>
       </v-tabs>
@@ -62,7 +62,7 @@ limitations under the License.
           <v-list>
             <v-list-item-group
               v-model="shortcutTab.selectedShortcuts"
-              color="cyan darken-2"
+              color="primary"
               active-class="g-border"
               multiple
             >

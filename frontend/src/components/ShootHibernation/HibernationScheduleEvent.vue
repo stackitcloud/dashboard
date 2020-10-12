@@ -20,8 +20,8 @@ limitations under the License.
       <v-row >
         <v-col class="weekday-select">
           <v-select
-          color="cyan darken-2"
-          item-color="cyan darken-2"
+          color="primary"
+          item-color="primary"
           v-model="selectedDays"
           ref="selectedDays"
           @blur="touchIfNothingFocused"
@@ -38,7 +38,7 @@ limitations under the License.
         </v-col>
         <v-col class="time-select">
           <v-text-field
-            color="cyan darken-2"
+            color="primary"
             label="Wake up at"
             v-model="wakeUpTime"
             ref="wakeUpTime"
@@ -50,7 +50,7 @@ limitations under the License.
         </v-col>
         <v-col class="time-select">
           <v-text-field
-            color="cyan darken-2"
+            color="primary"
             label="Hibernate at"
             v-model="hibernateTime"
             ref="hibernateTime"
@@ -62,7 +62,7 @@ limitations under the License.
         </v-col>
         <v-col class="timezone-select">
           <v-autocomplete
-            color="cyan darken-2"
+            color="primary"
             label="Timezone"
             :items="timezones"
             v-model="selectedTimezone"

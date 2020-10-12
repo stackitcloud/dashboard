@@ -20,7 +20,7 @@ limitations under the License.
       <template v-slot:activator="{ on }">
         <div v-on="on">
           <template v-if="isControlPlaneMigrating">
-            <v-progress-circular indeterminate size=12 width=2 color="cyan darken-2" class="mr-1"></v-progress-circular>
+            <v-progress-circular indeterminate size=12 width=2 color="primary" class="mr-1"></v-progress-circular>
             <router-link v-if="canLinkToSeed" class="cyan--text text--darken-2" :to="{ name: 'ShootItem', params: { name: shootStatusSeedName, namespace:'garden' } }">
               <span>{{shootStatusSeedName}}</span>
             </router-link>

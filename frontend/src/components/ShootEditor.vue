@@ -21,7 +21,7 @@ limitations under the License.
         tile
         type="warning"
         dismissible
-        color="cyan darken-2"
+        color="primary"
         transition="slide-y-transition"
         class="ma-0"
         :value="modificationWarning"
