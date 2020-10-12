@@ -17,7 +17,7 @@ limitations under the License.
 <template>
   <div class="newshoot-container">
     <v-container fluid class="newshoot-cards">
-      <v-card flat>
+      <v-card flat :style="isAdmin ?'': 'display:none'">
         <v-card-title class="subtitle-1 white--text primary cardTitle">
           Infrastructure
         </v-card-title>
@@ -76,7 +76,7 @@ limitations under the License.
           ></manage-workers>
        </v-card-text>
       </v-card>
-      <v-card flat class="mt-4">
+      <v-card flat class="mt-4" :style="isAdmin ?'': 'display:none'">
         <v-card-title class="subtitle-1 white--text primary cardTitle">
           Add-Ons (not actively monitored and provided on a best-effort basis only)
         </v-card-title>
