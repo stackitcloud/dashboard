@@ -19,24 +19,19 @@ limitations under the License.
     <v-main>
       <v-container fluid class="fill-height align-stretch">
         <v-row>
-          <v-col cols="5" class="d-flex flex-column">
+          <v-col cols="5" class="d-flex flex-column primary">
             <div class="flex-grow-1">
-              <img src="../assets/logo.svg" class="logo">
-              <h1>Gardener</h1>
-              <h2>Universal Kubernetes at Scale</h2>
+              <img src="../assets/logo-beta.svg" class="logo">
+              <h1>Kubernetes Engine</h1>
             </div>
             <div class="flex-grow-0 px-2">
               <img :src="footerLogoUrl" height="24">
             </div>
           </v-col>
           <v-col cols="7" class="d-flex flex-column">
-              <div class="flex-shrink-1">
-                <h1>Enterprise-Grade Kubernetes Service</h1>
-                <h2>Infrastructure agnostic and working across all major public clouds</h2>
-              </div>
-              <div v-if="landingPageUrl" class="flex-shrink-1 hint">
-                <span>Discover what our service is about at the</span>
-                <a :href="landingPageUrl" target="_blank">Gardener Landing Page <v-icon size="20">mdi-open-in-new</v-icon></a>
+              <div class="flex-shrink-1 primary--text">
+                <h1 class="primary--text">Enterprise-Grade Kubernetes Service</h1>
+                <h2>Serving for your purpose!</h2>
               </div>
               <div class="flex-grow-1 actions">
                 <div class="loginButton orange lighten-2 elevation-2" @click.stop="handleLogin(primaryLoginType)">
@@ -210,11 +205,11 @@ $hexOutline: darken($hexArea,1);
           padding: 0;
 
           .logo {
-            height: 20vw;
+            height: 6vw;
             pointer-events: none;
             display: block;
             margin: auto;
-            margin-top: 100px;
+            margin-top: 150px;
           }
 
           h1 {
