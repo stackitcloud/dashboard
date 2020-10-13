@@ -34,8 +34,8 @@ limitations under the License.
                 <h2>Serving for your purpose!</h2>
               </div>
               <div class="flex-grow-1 actions">
-                <div class="loginButton orange lighten-2 elevation-2" @click.stop="handleLogin(primaryLoginType)">
-                  Login <v-icon dark class="ml-1">mdi-login-variant</v-icon>
+                <div class="loginButton secondary primary--text elevation-2" @click.stop="handleLogin(primaryLoginType)">
+                  Login <v-icon dark class="ml-1 primary--text">mdi-login-variant</v-icon>
                 </div>
                 <template v-if="showTokenLoginLink">
                   <div class="loginLink">
@@ -305,7 +305,7 @@ $hexOutline: darken($hexArea,1);
               a {
                 color: #cfcfcf;
                 &:hover {
-                  color: #ffb74d;
+                  color: #004E5A;
                 }
               }
             }

@@ -39,15 +39,6 @@ limitations under the License.
           </v-tooltip>
         </template>
         <v-card tile>
-          <v-card-title primary-title>
-            <div class="content">
-              <div class="title mb-2">Gardener</div>
-              <v-progress-circular size="18" indeterminate v-if="!dashboardVersion"></v-progress-circular>
-              <div class="caption" v-if="!!gardenerVersion">API version {{gardenerVersion}}</div>
-              <div class="caption" v-if="!!dashboardVersion">Dashboard version {{dashboardVersion}}</div>
-            </div>
-          </v-card-title>
-          <v-divider></v-divider>
           <template v-for="(item, index) in helpMenuItems">
             <v-divider v-if="index !== 0" :key="`d-${index}`"></v-divider>
             <v-card-actions :key="index" class="px-3">
@@ -134,7 +125,6 @@ limitations under the License.
 import { mapState, mapGetters, mapActions } from 'vuex'
 import get from 'lodash/get'
 import Breadcrumb from '@/components/Breadcrumb'
-import { getInfo } from '@/utils/api'
 
 export default {
   name: 'toolbar',
@@ -198,30 +188,6 @@ export default {
       return {
         name: 'Account',
         query
-      }
-    }
-  },
-  watch: {
-    async help (value) {
-      if (value && !this.dashboardVersion) {
-        try {
-          const {
-            data: {
-              gardenerVersion,
-              version
-            } = {}
-          } = await getInfo()
-          if (gardenerVersion) {
-            this.gardenerVersion = gardenerVersion.gitVersion
-          }
-          if (version) {
-            this.dashboardVersion = `${version}`
-          }
-        } catch (err) {
-          this.setError({
-            message: `Failed to fetch version information. ${err.message}`
-          })
-        }
       }
     }
   }
