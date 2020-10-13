@@ -216,7 +216,7 @@ export default {
       'projectList'
     ]),
     footerLogoUrl () {
-      return this.cfg.footerLogoUrl || '/static/sap-logo.svg'
+      return ''
     },
     isActive: {
       get () {
