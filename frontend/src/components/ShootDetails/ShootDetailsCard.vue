@@ -180,8 +180,8 @@ limitations under the License.
           </v-list-item-action>
         </v-list-item>
       </template>
-      <v-divider inset></v-divider>
-      <v-list-item>
+      <v-divider inset :style="isAdmin ?'': 'display:none'"></v-divider>
+      <v-list-item :style="isAdmin ?'': 'display:none'">
         <v-list-item-icon>
           <v-icon color="primary">mdi-puzzle</v-icon>
         </v-list-item-icon>

@@ -39,7 +39,7 @@ limitations under the License.
         </v-list-item-content>
       </v-list-item>
       <v-divider inset></v-divider>
-      <v-list-item>
+      <v-list-item >
         <v-list-item-icon>
           <v-icon color="primary">mdi-speedometer</v-icon>
         </v-list-item-icon>
@@ -51,9 +51,9 @@ limitations under the License.
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <template v-if="canGetSecrets">
-        <v-divider inset></v-divider>
-        <cluster-metrics v-if="!metricsNotAvailableText" :shootItem="shootItem"></cluster-metrics>
+      <template v-if="canGetSecrets"  >
+        <v-divider inset  :style="isAdmin ?'': 'display:none'"></v-divider>
+        <cluster-metrics v-if="!metricsNotAvailableText" :shootItem="shootItem"  :style="isAdmin ?'': 'display:none'"></cluster-metrics>
         <v-list-item v-else>
           <v-list-item-icon>
             <v-icon color="primary">mdi-alert-circle-outline</v-icon>

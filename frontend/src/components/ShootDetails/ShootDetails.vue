@@ -18,7 +18,6 @@ limitations under the License.
     <v-row class="d-flex">
       <v-col cols="12" md="6">
         <shoot-details-card :shootItem="shootItem"></shoot-details-card>
-        <shoot-infrastructure-card :shootItem="shootItem" class="mt-4"></shoot-infrastructure-card>
         <shoot-external-tools-card :shootItem="shootItem" class="mt-4"></shoot-external-tools-card>
         <shoot-lifecycle-card ref="shootLifecycle" :shootItem="shootItem" class="mt-4"></shoot-lifecycle-card>
       </v-col>
@@ -30,6 +29,7 @@ limitations under the License.
           <shoot-access-card :shootItem="shootItem" @addTerminalShortcut="onAddTerminalShortcut"></shoot-access-card>
         </v-card>
         <shoot-monitoring-card :shootItem="shootItem"></shoot-monitoring-card>
+        <shoot-infrastructure-card :shootItem="shootItem" class="mt-4"></shoot-infrastructure-card>
         <tickets-card :tickets="tickets" :shootItem="shootItem" class="mt-4"></tickets-card>
       </v-col>
     </v-row>
