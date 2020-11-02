@@ -213,7 +213,6 @@ import head from 'lodash/head'
 import get from 'lodash/get'
 import map from 'lodash/map'
 import isEmpty from 'lodash/isEmpty'
-import concat from 'lodash/concat'
 import includes from 'lodash/includes'
 import forEach from 'lodash/forEach'
 import cloneDeep from 'lodash/cloneDeep'
@@ -408,14 +407,7 @@ export default {
       return this.infrastructureSecretsByCloudProfileName(this.cloudProfileName)
     },
     secretItems () {
-      if (!isEmpty(this.infrastructureKind)) {
-        return concat(this.infrastructureSecretsByProfileName, {
-          value: 'ADD_NEW_SECRET',
-          title: 'Add new Secret'
-        })
-      } else {
-        return this.infrastructureSecretsByProfileName
-      }
+      return this.infrastructureSecretsByProfileName
     },
     secretHint () {
       if (this.selfTerminationDays) {
