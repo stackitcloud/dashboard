@@ -127,6 +127,7 @@ function getProjectName (namespace) {
 exports.list = async function ({ user, qs = {} }) {
   const projects = cache.getProjects()
   const isAdmin = await authorization.isAdmin(user)
+  const isBIM = await authorization.isBIM(user)
 
   const isMemberOf = project => {
     const hasGroupMembership = _
@@ -159,7 +160,7 @@ exports.list = async function ({ user, qs = {} }) {
   return _
     .chain(projects)
     .filter(project => {
-      if (!isAdmin && !isMemberOf(project)) {
+      if (!isAdmin && !isMemberOf(project) && !isBIM) {
         return false
       }
       if (!_.isEmpty(phases)) {

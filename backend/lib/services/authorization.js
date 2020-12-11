@@ -51,6 +51,17 @@ exports.isAdmin = function (user) {
   })
 }
 
+exports.isBIM = function (user) {
+  // if someone is allowed to get all projects he is considered to be an bim
+  return hasAuthorization(user, {
+    resourceAttributes: {
+      verb: 'list',
+      group: 'core.gardener.cloud',
+      resource: 'projects'
+    }
+  })
+}
+
 exports.canGetOpenAPI = function (user) {
   return hasAuthorization(user, {
     nonResourceAttributes: {
