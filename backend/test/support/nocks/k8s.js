@@ -314,6 +314,24 @@ function canGetSecretsInAllNamespaces (scope) {
     })
 }
 
+function canListProjects (scope) {
+  return scope
+    .post('/apis/authorization.k8s.io/v1/selfsubjectaccessreviews', body => {
+      const { namespace, verb, resource, group } = body.spec.resourceAttributes
+      return !namespace && group === 'core.gardener.cloud' && resource === 'projects' && verb === 'list'
+    })
+    .reply(200, function (body) {
+      const [, token] = _.split(this.req.headers.authorization, ' ', 2)
+      const payload = jwt.decode(token)
+      const allowed = _.includes(gardenAdministrators, payload.id)
+      return _.assign({
+        status: {
+          allowed
+        }
+      }, body)
+    })
+}
+
 function canGetOpenAPI (scope) {
   return scope
     .post('/apis/authorization.k8s.io/v1/selfsubjectaccessreviews', body => {
@@ -923,6 +941,7 @@ const stub = {
   getProjects ({ bearer }) {
     const scope = nockWithAuthorization(bearer)
     canGetSecretsInAllNamespaces(scope)
+    canListProjects(scope)
     return scope
   },
   getTerminalConfig ({ bearer, namespace, shootName, target }) {
