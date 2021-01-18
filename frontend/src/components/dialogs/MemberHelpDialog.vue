@@ -23,10 +23,12 @@ limitations under the License.
       </v-card-title>
       <v-card-text>
         <template v-if="isUserDialog">
-          <div class="title grey--text text--darken-1 my-4">Add users to your project.</div>
+          <!--<div class="title grey--text text--darken-1 my-4">Add users to your project.</div>-->
+          <div class="title grey--text text--darken-1 my-4">Access</div>
           <p class="body-1">
-            Adding users to your project allows you to collaborate across your team.
-            Access to resources within your project can be configured by assigning roles.
+            <!--             Adding users to your project allows you to collaborate across your team.
+            Access to resources within your project can be configured by assigning roles. -->
+            If you need to share clusters within your team, please exchange the kubeconfig in a secure way.
           </p>
         </template>
         <template v-if="isServiceDialog">

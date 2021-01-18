@@ -66,20 +66,20 @@ limitations under the License.
         <v-btn v-if="allEmails" icon :href="`mailto:${allEmails}`">
           <v-icon class="white--text">mdi-email-outline</v-icon>
         </v-btn>
-        <v-btn v-if="canManageMembers" icon @click.native.stop="openUserAddDialog">
-          <v-icon class="white--text">add</v-icon>
-        </v-btn>
+<!--        <v-btn v-if="canManageMembers" icon @click.native.stop="openUserAddDialog">-->
+<!--          <v-icon class="white&#45;&#45;text">add</v-icon>-->
+<!--        </v-btn>-->
         <v-btn icon @click.native.stop="openUserHelpDialog">
-          <v-icon class="white--text">mdi-help-circle-outline</v-icon>
+          <v-icon class="white--text help-btn">mdi-help-circle-outline</v-icon>
         </v-btn>
       </v-toolbar>
 
       <v-card-text v-if="!userList.length">
-        <div class="title grey--text text--darken-1 my-4">Add users to your project.</div>
-        <p class="body-1">
-          Adding users to your project allows you to collaborate across your team.
-          Access to resources within your project can be configured by assigning roles.
-        </p>
+<!--        <div class="title grey&#45;&#45;text text&#45;&#45;darken-1 my-4">Add users to your project.</div>-->
+<!--        <p class="body-1">-->
+<!--          Adding users to your project allows you to collaborate across your team.-->
+<!--          Access to resources within your project can be configured by assigning roles.-->
+<!--        </p>-->
       </v-card-text>
       <v-list two-line subheader v-else>
         <template v-for="(user, index) in sortedAndFilteredUserList">
@@ -120,19 +120,23 @@ limitations under the License.
           v-model="serviceAccountFilter"
           @keyup.esc="serviceAccountFilter=''"
         ></v-text-field>
-        <v-btn v-if="canManageServiceAccountMembers" icon @click.native.stop="openServiceAccountAddDialog">
-          <v-icon class="white--text">add</v-icon>
-        </v-btn>
-        <v-btn icon @click.native.stop="openServiceAccountHelpDialog">
-          <v-icon class="white--text">mdi-help-circle-outline</v-icon>
-        </v-btn>
+<!--        <v-btn v-if="canManageServiceAccountMembers" icon @click.native.stop="openServiceAccountAddDialog">-->
+<!--          <v-icon class="white&#45;&#45;text">add</v-icon>-->
+<!--        </v-btn>-->
+<!--        <v-btn icon @click.native.stop="openServiceAccountHelpDialog">-->
+<!--          <v-icon class="white&#45;&#45;text help-btn">mdi-help-circle-outline</v-icon>-->
+<!--        </v-btn>-->
       </v-toolbar>
 
       <v-card-text v-if="!serviceAccountList.length">
-        <div class="title grey--text text--darken-1 my-4">Add service accounts to your project.</div>
+<!--        <div class="title grey&#45;&#45;text text&#45;&#45;darken-1 my-4">Add service accounts to your project.</div>-->
+        <div class="title grey--text text--darken-1 my-4">Comming soon.</div>
+<!--        <p class="body-1">-->
+<!--          Adding service accounts to your project allows you to automate processes in your project.-->
+<!--          Access to resources within your project can be configured by assigning roles.-->
+<!--        </p>-->
         <p class="body-1">
-          Adding service accounts to your project allows you to automate processes in your project.
-          Access to resources within your project can be configured by assigning roles.
+          Create Serviceaccounts for your clusters with kubectl.
         </p>
       </v-card-text>
       <v-list two-line subheader v-else>
@@ -495,5 +499,9 @@ export default {
 
   .serviceAccount_name {
     color: rgb(0, 137, 123);
+  }
+
+  .help-btn {
+    color: red !important;
   }
 </style>
