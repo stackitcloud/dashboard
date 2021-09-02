@@ -46,7 +46,7 @@
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
     "object-hash": "^2.0.0",
-    "openid-client": "^3.1.1",
+    "openid-client": "^3.15.10",
     "p-event": "^4.1.0",
     "p-retry": "^4.2.0",
     "p-timeout": "^3.2.0",
